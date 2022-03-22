@@ -588,14 +588,6 @@
       "chainId": 70,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xc4447e324648b54974D61D54882e947555d8521e.png"
-    },
-    {
-      "name": "DIA",
-      "symbol": "DIA",
-      "address": "0x75da067EA82F95Da9eCD365B208E367278B2905F",
-      "chainId": 70,
-      "decimals": 18,
-      "logoURI": "https://exchange.puddingswap.finance/images/coins/0xE4abfa38995474Ddcf506F2BdEA46322b691DD6e.png"
     }
   ]
 }
