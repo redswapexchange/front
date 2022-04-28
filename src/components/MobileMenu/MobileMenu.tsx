@@ -59,6 +59,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             <StyledAbsoluteLink href="https://puddingswap.finance/chefnft">NFT</StyledAbsoluteLink>
           </Cn>
           <Cn>
+            <StyledAbsoluteLink href="https://puddingswap.finance/Synthesiser">
+              <TranslatedText translationId="Pudding Making">Pudding Making</TranslatedText>
+            </StyledAbsoluteLink>
+          </Cn>
+          <Cn>
             <StyledLink className="active" to="/">
               <TranslatedText translationId={202}>Exchange</TranslatedText>
             </StyledLink>
