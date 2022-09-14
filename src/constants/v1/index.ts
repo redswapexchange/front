@@ -4,8 +4,8 @@ import V1_EXCHANGE_ABI from './v1_exchange.json'
 import V1_FACTORY_ABI from './v1_factory.json'
 
 const V1_FACTORY_ADDRESSES: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: '0x6168D508ad65D87f8F5916986B55d134Af7153bb', //TODO
-  [ChainId.TESTNET]: '0x34b213d17d104099D50707C2fCDF1bD3325a80B2'
+  [ChainId.MAINNET]: '0x7393a59a580258282c7dEdd524002AA79BE3b8A7', //TODO
+  [ChainId.TESTNET]: '' // '0x34b213d17d104099D50707C2fCDF1bD3325a80B2'
 }
 
 const V1_FACTORY_INTERFACE = new Interface(V1_FACTORY_ABI)

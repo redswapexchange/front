@@ -19,6 +19,8 @@ interface PositionCardProps extends RouteComponentProps<{}> {
 function V1PositionCard({ token, V1LiquidityBalance }: PositionCardProps) {
   const theme = useContext(ThemeContext)
 
+  debugger
+
   const { chainId } = useActiveWeb3React()
 
   return (

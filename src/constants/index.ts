@@ -4,7 +4,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 // import { bsc, fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 import { injected } from '../connectors'
 // TODO
-export const ROUTER_ADDRESS = '0x764f1fbfbcDd07C040748A3dDF393c9fa3e657F3'
+export const ROUTER_ADDRESS = '0x7e74a5Be774B63A58ed51225FB3af28548323b99'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -57,8 +57,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0xbE8D16084841875a1f398E6C3eC00bBfcbFa571b', 18, 'PUD', 'PuddingSwap Token'),
-      new Token(ChainId.MAINNET, '0x3EFF9D389D13D6352bfB498BCF616EF9b1BEaC87', 18, 'WHOO', 'Wrapped HOO')
+      new Token(ChainId.MAINNET, '0xD0198483de27235c28B707AC65283D63Cc09DC63', 18, 'PUD', 'PuddingSwap Token'),
+      new Token(ChainId.MAINNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WHOO', 'Wrapped HOO')
     ],
     // [USDT]
   ]

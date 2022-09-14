@@ -1,22 +1,23 @@
+const chainId = 14000
+
 export const contractAddresses = {
   sushi: {
-    70: '0xbE8D16084841875a1f398E6C3eC00bBfcbFa571b',
-    170: '0x96D808A323d9eB1De23F7d82F83574e6969c5591',
+    [chainId]: '0xD0198483de27235c28B707AC65283D63Cc09DC63'
+    // 170: '0x96D808A323d9eB1De23F7d82F83574e6969c5591',
   },
   weth: {
-    70: '0x3EFF9D389D13D6352bfB498BCF616EF9b1BEaC87',
-    170: '0x96D808A323d9eB1De23F7d82F83574e6969c5591',
+    [chainId]: '0xBE1490094B78946d0A42104eE8d166108075DCc3'
+    // 170: '0x96D808A323d9eB1De23F7d82F83574e6969c5591',
   }
 }
 
 const multicall = {
-  170: '0xbE8D16084841875a1f398E6C3eC00bBfcbFa571b',
-  70: '0x03fF6895aB1Fdff998665E34368B69a032F50578',
+  [chainId]: '0x09F67cfA0Bf612D96cF85b78dafb872166459ABA'
+  // 70: '0x03fF6895aB1Fdff998665E34368B69a032F50578',
 }
-const chainId = 70
 
 interface AddressProps {
-  70: string // Address of the contract
+  [chainId]: string // Address of the contract
 }
 export const getAddress = (obj: AddressProps) => {
   return obj[chainId] ? obj[chainId] : obj

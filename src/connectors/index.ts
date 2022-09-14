@@ -1,3 +1,4 @@
+// import { ChainId } from '@pancakeswap-libs/sdk';
 import { Web3Provider } from '@ethersproject/providers'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
@@ -27,11 +28,13 @@ export function getNetworkLibrary(): Web3Provider {
   return (networkLibrary = networkLibrary ?? new Web3Provider(network.provider as any))
 }
 
+const chainIds = [parseInt(process.env.REACT_APP_CHAIN_ID ?? '1'), parseInt(process.env.REACT_APP_CHAIN_ID ?? '1')]
 export const injected = new InjectedConnector({
-  supportedChainIds: [170, 70]
+  // supportedChainIds: [170, 70]
+  supportedChainIds: chainIds
 })
 
-export const bsc = new BscConnector({ supportedChainIds: [170, 70] })
+export const bsc = new BscConnector({ supportedChainIds: chainIds })
 
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
