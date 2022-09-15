@@ -104,7 +104,6 @@ export default function Swap() {
     typedValue
   )
 
-  console.log(wrapType, WrapType)
   const showWrap: boolean = wrapType !== WrapType.NOT_APPLICABLE
   const { address: recipientAddress } = useENSAddress(recipient)
   const toggledVersion = useToggledVersion()
@@ -132,8 +131,6 @@ export default function Swap() {
         [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount
       }
 
-  console.log('currencies[Field.INPUT]', currencies[Field.INPUT])
-  console.log('currencies[Field.OUTPUT]', currencies[Field.OUTPUT])
   const { onSwitchTokens, onCurrencySelection, onUserInput, onChangeRecipient } = useSwapActionHandlers()
   const isValid =
     !swapInputError || currencies[Field.INPUT]?.name !== 'SAME' || currencies[Field.OUTPUT]?.name !== 'SAME'

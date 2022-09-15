@@ -209,8 +209,6 @@ export default function CurrencyInputPanel({
             }}
           >
             <Aligner>
-              {pair ? pair.token0 : ''}
-              {pair ? pair.token1 : ''}
               {pair ? (
                 <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={24} margin={true} />
               ) : currency ? (

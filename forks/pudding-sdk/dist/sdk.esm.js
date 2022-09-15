@@ -16,8 +16,8 @@ var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 14000] = "MAINNET";
-  ChainId[ChainId["TESTNET"] = 14001] = "TESTNET";
+  ChainId[ChainId["MAINNET"] = 100] = "MAINNET";
+  ChainId[ChainId["TESTNET"] = 101] = "TESTNET";
 })(ChainId || (ChainId = {}));
 
 var TradeType;
@@ -35,8 +35,8 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x7e74a5Be774B63A58ed51225FB3af28548323b99';
-var INIT_CODE_HASH = '0x80bd44b36fff03b8bb0913a44b51ae0e27c1d42bc4a5dd86a7c9a6a714739241';
+var FACTORY_ADDRESS = '0xFBd879B24A65559da3D7F7591FCE659115420Ba9';
+var INIT_CODE_HASH = '0xbfeebd3982986f9e510c57c9d540cabc15ede1535ef6d7c9af9773983414608a';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -435,7 +435,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WHOO', 'Wrapped HOO'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WHOO', 'Wrapped HOO'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xCD05c66643b9AbeCbD2Bf3c7F4A08385aad7A723', 18, 'WHOO', 'Wrapped HOO'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xCD05c66643b9AbeCbD2Bf3c7F4A08385aad7A723', 18, 'WHOO', 'Wrapped HOO'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -1495,7 +1495,7 @@ var ERC20 = [
 
 var _TOKEN_DECIMALS_CACHE;
 var TOKEN_DECIMALS_CACHE = (_TOKEN_DECIMALS_CACHE = {}, _TOKEN_DECIMALS_CACHE[ChainId.MAINNET] = {
-  '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A': 9 // DGD
+  '0xb891FE7b38f857f53a7B5529204c58D5c487280b': 9 // DGD
 
 }, _TOKEN_DECIMALS_CACHE);
 /**

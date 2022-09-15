@@ -80,6 +80,7 @@ export function useMulticallContract(): Contract | null {
   return useContract(chainId && MULTICALL_NETWORKS[chainId], MULTICALL_ABI, false)
 }
 
+// 这个方法地址 未知
 export function useSocksController(): Contract | null {
   const { chainId } = useActiveWeb3React()
   return useContract(
