@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import logoDark from '../../../assets/images/logo-pipi-light.png'
 import logoLight from '../../../assets/images/logo-pipi-light.png'
 import redswapsvg from '../../../assets/images/redswapsvg.png'
+import { isMobile } from 'react-device-detect'
 // import logoText from '../../../assets/images/logo_text.png'÷\
 
 interface LogoProps {
@@ -13,7 +14,7 @@ const Logo: React.FC<LogoProps> = ({ isDark }) => {
     <StyledLogo>
       <img className="logo-img" src={isDark ? logoDark : logoLight} alt="logo" />
       {/* <div className="text">REDSWAP</div> */}
-      <img className="red-log-img" src={redswapsvg} alt="" />
+      {!isMobile && <img className="red-log-img" src={redswapsvg} alt="" />}
     </StyledLogo>
   )
 }

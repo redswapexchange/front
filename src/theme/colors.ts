@@ -9,7 +9,7 @@ export const green = {
 export const red = {
   red1: '#FF6871',
   red2: '#F82D3A',
-  red3: '#fd9537'
+  red3: '#c63745'
 }
 
 export const yellow = {

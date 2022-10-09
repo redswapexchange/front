@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import TranslatedText from '../TranslatedText'
+import swapNav from '../../assets/images/swapNav.png'
+import swapHoverNav from '../../assets/images/swapHoverNav.png'
+
+import liquitdiNvg from '../../assets/images/liquitdiNvg.png'
+import chartNav from '../../assets/images/chartNav.png'
+import codeNav from '../../assets/images/codeNav.png'
 
 const Nav: React.FC = () => {
   // const [isMore, setIsMore] = useState(false)
@@ -58,7 +64,31 @@ const Nav: React.FC = () => {
       </div> */}
 
       <StyledAbsoluteLink href="/" className="active">
-        <TranslatedText translationId={202}>Exchange</TranslatedText>
+        <img className="navImg" src={swapNav} alt="" sizes="" />
+        <span className="navText">
+          <TranslatedText translationId={202}>Swap</TranslatedText>
+        </span>
+      </StyledAbsoluteLink>
+
+      <StyledAbsoluteLink href="/">
+        <img className="navImg" src={liquitdiNvg} alt="" sizes="" />
+        <span className="navText">
+          <TranslatedText translationId={202}>Liquidity</TranslatedText>
+        </span>
+      </StyledAbsoluteLink>
+
+      <StyledAbsoluteLink href="/">
+        <img className="navImg" src={chartNav} alt="" sizes="" />
+        <span className="navText">
+          <TranslatedText translationId={202}>Chart</TranslatedText>
+        </span>
+      </StyledAbsoluteLink>
+
+      <StyledAbsoluteLink href="/">
+        <img className="navImg" src={codeNav} alt="" sizes="" />
+        <span className="navText">
+          <TranslatedText translationId={202}>Code</TranslatedText>
+        </span>
       </StyledAbsoluteLink>
       {/* <StyledAbsoluteLink href="https://puddingswap.finance/ido" className="active">
         IDO
@@ -82,14 +112,27 @@ const StyledNav = styled.nav`
 
 const StyledAbsoluteLink = styled.a`
   position: relative;
-  color: rgb(127, 134, 143);
-  margin-right: 24px;
+  color: #282728;
   text-decoration: none;
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  background-size: auto 20px;
+  // &:hover {
+  //   color: ${({ theme }) => theme.colors.primary};
+  //   background-image: url(${swapHoverNav});
+  // }
+  .navText {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
   }
   @media (max-width: 400px) {
     margin-right: 24px;
+  }
+  .navImg {
+    height: 20px;
+    width: auto;
   }
 `
 

@@ -4,8 +4,8 @@ import { isMobile } from 'react-device-detect'
 
 import styled from 'styled-components'
 import Settings from '../Settings'
-import useHtPrice from '../../hooks/useHtPrice'
-import LngSwithForWeb from './LngSwithForWeb'
+// import useHtPrice from '../../hooks/useHtPrice'
+// import LngSwithForWeb from './LngSwithForWeb'
 import Nav from './Nav'
 import { useIsDarkMode } from '../../state/user/hooks'
 import Logo from './Logo'
@@ -95,26 +95,26 @@ const StyledAccountButtonWrapper = styled.div`
     }
   `};
 `
-const Price = styled.div`
-  color: ${props => props.theme.colors.primary};
-  margin-right: 24px;
-  font-weight: bolder;
-`
+// const Price = styled.div`
+//   color: ${props => props.theme.colors.primary};
+//   margin-right: 24px;
+//   font-weight: bolder;
+// `
 
-const PriceLInk = styled.a`
-color: ${props => props.theme.colors.primary};
-margin-right: 24px;
-font-weight: bolder;
-text-decoration: none;
-`
+// const PriceLInk = styled.a`
+// color: ${props => props.theme.colors.primary};
+// margin-right: 24px;
+// font-weight: bolder;
+// text-decoration: none;
+// `
 
-function isZero(num: number) {
-  return Math.abs(num - 0) <= 1e-8
-}
+// function isZero(num: number) {
+//   return Math.abs(num - 0) <= 1e-8
+// }
 
 export default function Header() {
   const isDark = useIsDarkMode()
-  const { pippiPrice } = useHtPrice()
+  // const { pippiPrice } = useHtPrice()
   const [mobileMenu, setMobileMenu] = useState(false)
   const handlePresentMobileMenu = useCallback(() => {
     setMobileMenu(true)
@@ -145,10 +145,10 @@ export default function Header() {
             <HeaderElement>
               <StyledAccountButtonWrapper>
                 <Web3Status />
-                {!isZero(pippiPrice) && <Price className="number price"><PriceLInk href="https://www.coingecko.com/en/exchanges/puddingswap" target="_blank" rel="noopener noreferrer"> 1PUD=${pippiPrice.toFixed(3)} </PriceLInk></Price>}
+                {/* {!isZero(pippiPrice) && <Price className="number price"><PriceLInk href="https://www.coingecko.com/en/exchanges/puddingswap" target="_blank" rel="noopener noreferrer"> 1PUD=${pippiPrice.toFixed(3)} </PriceLInk></Price>} */}
                 <AccountButton />
                 <Settings />
-                <LngSwithForWeb />
+                {/* <LngSwithForWeb /> */}
               </StyledAccountButtonWrapper>
             </HeaderElement>
           </HeaderControls>

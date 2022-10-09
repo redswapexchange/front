@@ -6,8 +6,16 @@ import TranslatedText from '../TranslatedText'
 // import LngSwith from '../Header/LngSwith'
 // import useHTPrice from '../../hooks/useHtPrice'
 // import { useActiveWeb3React } from '../../hooks'
-import TopDecoration from './TopDecoration'
-import BottomDecoration from './BottomDecoration'
+// import TopDecoration from './TopDecoration'
+// import BottomDecoration from './BottomDecoration'
+
+import swapNav from '../../assets/images/swapNav.png'
+// import swapHoverNav from '../../assets/images/swapHoverNav.png'
+
+import liquitdiNvg from '../../assets/images/liquitdiNvg.png'
+import chartNav from '../../assets/images/chartNav.png'
+import codeNav from '../../assets/images/codeNav.png'
+import logo from '../../assets/images/logo3.png'
 
 interface MobileMenuProps {
   onDismiss: () => void
@@ -28,8 +36,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
         <StyledBackdrop onClick={onDismiss} />
         <StyledMobileMenu>
           <Bg></Bg>
-          <TopDecoration />
-          <BottomDecoration />
+          <div className="logo-div">
+            <img src={logo} alt="" />
+          </div>
+          {/* <TopDecoration />
+          <BottomDecoration /> */}
           {/* <Cn>
             <StyledAbsoluteLink href="https://puddingswap.finance">
               <TranslatedText translationId={130}>Home</TranslatedText>
@@ -65,22 +76,36 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
           </Cn> */}
           <Cn>
             <StyledLink className="active" to="/">
-              <TranslatedText translationId={202}>Exchange</TranslatedText>
+              <img className="navImg" src={swapNav} alt="" sizes="" />
+              <span className="navText">
+                <TranslatedText translationId={202}>Swap</TranslatedText>
+              </span>
             </StyledLink>
           </Cn>
-          {/* <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/ido">IDO</StyledAbsoluteLink>
-          </Cn>
           <Cn>
-            <StyledAbsoluteLink href="https://info.puddingswap.finance">
-              <TranslatedText translationId={348}>Analytics</TranslatedText>
+            <StyledAbsoluteLink href="/">
+              <img className="navImg" src={liquitdiNvg} alt="" sizes="" />
+              <span className="navText">
+                <TranslatedText translationId={202}>Liquidity</TranslatedText>
+              </span>
             </StyledAbsoluteLink>
           </Cn>
           <Cn>
-            <StyledAbsoluteLink href="https://voting.puddingswap.finance">
-              <TranslatedText translationId={370}>Voting</TranslatedText>
+            <StyledAbsoluteLink href="/">
+              <img className="navImg" src={chartNav} alt="" sizes="" />
+              <span className="navText">
+                <TranslatedText translationId={202}>Chart</TranslatedText>
+              </span>
             </StyledAbsoluteLink>
-          </Cn> */}
+          </Cn>
+          <Cn>
+            <StyledAbsoluteLink href="/">
+              <img className="navImg" src={codeNav} alt="" sizes="" />
+              <span className="navText">
+                <TranslatedText translationId={202}>Code</TranslatedText>
+              </span>
+            </StyledAbsoluteLink>
+          </Cn>
           {/* <Bottom>
             {account && !isZero(pippiPrice) && <Price className="number">1PUD=${pippiPrice.toFixed(3)}</Price>}
             <LngSwith className="mobile-lng-swith"></LngSwith>
@@ -156,34 +181,64 @@ const StyledMobileMenu = styled.div`
   bottom: 0;
   width: calc(100% - 130px);
   padding-top: 24px;
+  .logo-div {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    img {
+      max-width: 50%;
+    }
+  }
 `
 
 const StyledLink = styled(NavLink)`
   position: relative;
   box-sizing: border-box;
-  color: rgb(127, 134, 143);
+  color: #282728;
   font-size: 16px;
   font-weight: 700;
   text-align: left;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  .navImg {
+    height: 20px;
+    width: auto;
+  }
+  .navText {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
   &.active {
     color: ${props => props.theme.colors.red3};
   }
 `
-// const StyledAbsoluteLink = styled.a`
-//   position: relative;
-//   color: rgb(127, 134, 143);
-//   font-weight: 700;
-//   text-decoration: none;
-//   &:hover {
-//     color: ${props => props.theme.colors.red3};
-//   }
-//   &.active {
-//     color: ${props => props.theme.colors.red3};
-//   }
-// `
+const StyledAbsoluteLink = styled.a`
+  position: relative;
+  color: #282728;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  .navText {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .navImg {
+    height: 20px;
+    width: auto;
+  }
+  &:hover {
+    color: ${props => props.theme.colors.red3};
+  }
+  &.active {
+    color: ${props => props.theme.colors.red3};
+  }
+`
 const Cn = styled.div`
-  margin: 24px 24px 0 24px;
+  margin: 30px 24px 0 24px;
 `
 // const Price = styled.div`
 //   width: 100%;

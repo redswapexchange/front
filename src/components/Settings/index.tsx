@@ -1,5 +1,5 @@
 import React, { useRef, useContext, useState } from 'react'
-import { Settings, X } from 'react-feather'
+import { X } from 'react-feather'
 import styled from 'styled-components'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import {
@@ -8,6 +8,7 @@ import {
   useUserDeadline,
   useAudioModeManager
 } from '../../state/user/hooks'
+import { isMobile } from 'react-device-detect'
 import TransactionSettings from '../TransactionSettings'
 import { RowFixed, RowBetween } from '../Row'
 import { TYPE } from '../Shared'
@@ -20,14 +21,7 @@ import { Text } from 'rebass'
 import Modal from '../Modal'
 import TranslatedText from '../TranslatedText'
 
-const StyledMenuIcon = styled(Settings)`
-  height: 20px;
-  width: 20px;
-
-  > * {
-    stroke: ${({ theme }) => theme.colors.text1};
-  }
-`
+import settingIcon from '../../assets/images/settingIcon.png'
 
 const StyledCloseIcon = styled(X)`
   height: 20px;
@@ -50,20 +44,27 @@ const StyledMenuButton = styled.button`
   margin: 0;
   padding: 0;
   height: 35px;
-  background-color: ${({ theme }) => theme.colors.bg3};
-
   padding: 0.15rem 0.5rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
 
   :hover,
   :focus {
     cursor: pointer;
     outline: none;
-    background-color: ${({ theme }) => theme.colors.bg4};
   }
 
   svg {
     margin-top: 2px;
+  }
+  .settingsSpan {
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+  .setting-img {
+    width: 32px;
   }
 `
 const EmojiWrapper = styled.div`
@@ -181,7 +182,8 @@ export default function SettingsTab() {
         </ModalContentWrapper>
       </Modal>
       <StyledMenuButton onClick={toggle} id="open-settings-dialog-button">
-        <StyledMenuIcon />
+        <img className="setting-img" src={settingIcon} alt="" />
+        {!isMobile && <span className="settingsSpan"> Settings </span>}
         {expertMode && (
           <EmojiWrapper>
             <span role="img" aria-label="wizard-icon">
