@@ -60,7 +60,7 @@ const AccountButton: React.FC<{}> = () => {
             </Content>
             <Content>
               <div className="title">
-                <TranslatedText translationId={226}>Your Pudding Balance</TranslatedText>
+                <TranslatedText translationId={226}>Your ALYX Balance</TranslatedText>
               </div>
               <div className="money">{getBalanceNumber(sushiBalance)}</div>
               <div className="title usdt">=${getBalanceNumber(sushiBalance) * pippiPrice}</div>

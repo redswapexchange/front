@@ -4,9 +4,10 @@ import TranslatedText from '../TranslatedText'
 import swapNav from '../../assets/images/swapNav.png'
 import swapHoverNav from '../../assets/images/swapHoverNav.png'
 
-import liquitdiNvg from '../../assets/images/liquitdiNvg.png'
+import liquidityNav from '../../assets/images/liquitdiNvg.png'
 import chartNav from '../../assets/images/chartNav.png'
 import codeNav from '../../assets/images/codeNav.png'
+import { NavLink } from 'react-router-dom'
 
 const Nav: React.FC = () => {
   // const [isMore, setIsMore] = useState(false)
@@ -63,19 +64,19 @@ const Nav: React.FC = () => {
         </StyledAbsoluteLink>
       </div> */}
 
-      <StyledAbsoluteLink href="/" className="active">
+      <StyledLink to={'/'} className="active">
         <img className="navImg" src={swapNav} alt="" sizes="" />
         <span className="navText">
           <TranslatedText translationId={202}>Swap</TranslatedText>
         </span>
-      </StyledAbsoluteLink>
+      </StyledLink>
 
-      <StyledAbsoluteLink href="/">
-        <img className="navImg" src={liquitdiNvg} alt="" sizes="" />
+      <StyledLink to={'/pool'}>
+        <img className="navImg" src={liquidityNav} alt="" sizes="" />
         <span className="navText">
           <TranslatedText translationId={202}>Liquidity</TranslatedText>
         </span>
-      </StyledAbsoluteLink>
+      </StyledLink>
 
       <StyledAbsoluteLink href="/">
         <img className="navImg" src={chartNav} alt="" sizes="" />
@@ -108,6 +109,32 @@ const StyledNav = styled.nav`
   display: flex;
   font-size: 14px;
   font-weight: 700;
+`
+
+const StyledLink = styled(NavLink)`
+  position: relative;
+  color: #282728;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  background-size: auto 20px;
+  // &:hover {
+  //   color: ${({ theme }) => theme.colors.primary};
+  //   background-image: url(${swapHoverNav});
+  // }
+  .navText {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  @media (max-width: 400px) {
+    margin-right: 24px;
+  }
+  .navImg {
+    height: 20px;
+    width: auto;
+  }
 `
 
 const StyledAbsoluteLink = styled.a`
