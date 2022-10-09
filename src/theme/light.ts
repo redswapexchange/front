@@ -27,7 +27,7 @@ export default {
     primary5: '#ffefe1',
 
     // color text
-    primaryText1: '#fd8137',
+    primaryText1: '#c63745',
     buttonText: '#ffffff',
 
     // secondary colors

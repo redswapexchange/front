@@ -9,6 +9,8 @@ export const BodyWrapper = styled.div`
   box-shadow: 0px 2px 10px rgba(171, 133, 115, 0.16);
   border-radius: 0;
   padding: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
 `
 
 export const Container = styled.div`
