@@ -110,6 +110,7 @@ export default function RemoveLiquidity({
 
     const deadlineForSignature: number = Math.ceil(Date.now() / 1000) + deadline
 
+    
     const EIP712Domain = [
       { name: 'name', type: 'string' },
       { name: 'version', type: 'string' },
@@ -465,6 +466,8 @@ export default function RemoveLiquidity({
     liquidityPercentChangeCallback
   )
 
+  const chainSymbol = process.env.REACT_APP_CHAIN_SYMBOL
+
   return (
     <>
       <AppBody>
@@ -562,7 +565,7 @@ export default function RemoveLiquidity({
                               currencyB === ETHER ? WETH[chainId].address : currencyIdB
                             }`}
                           >
-                            Receive WHOO
+                            Receive {chainSymbol}
                           </StyledInternalLink>
                         ) : oneCurrencyIsWETH ? (
                           <StyledInternalLink
@@ -570,7 +573,7 @@ export default function RemoveLiquidity({
                               currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'ETH' : currencyIdA
                             }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'ETH' : currencyIdB}`}
                           >
-                            Receive HOO
+                            Receive {chainSymbol}
                           </StyledInternalLink>
                         ) : null}
                       </RowBetween>

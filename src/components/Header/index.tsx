@@ -129,7 +129,7 @@ export default function Header() {
           <Menu onClick={handlePresentMobileMenu}>
             <img src={menuIcon} alt="menu" />
           </Menu>
-          <Title href="https://puddingswap.finance/">
+          <Title href="/">
             <Logo isDark={isDark} />
           </Title>
           {!isMobile && <Nav />}

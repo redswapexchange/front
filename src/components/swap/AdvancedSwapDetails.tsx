@@ -71,8 +71,8 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
                   treasuryFee: '0.15%',
                   teamFee: '0.05%',
                   buybackFee: '0.05%',
-                  token: 'PUD',
-                  team: 'PuddingSwap'
+                  token: 'ALYX',
+                  team: 'ALYX Swap'
                 }
               )}
             />

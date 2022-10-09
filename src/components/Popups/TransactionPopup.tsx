@@ -23,7 +23,7 @@ export default function TransactionPopup({
   const { chainId } = useActiveWeb3React()
 
   const theme = useContext(ThemeContext)
-
+  const chainSymbol = process.env.REACT_APP_CHAIN_SYMBOL
   return (
     <RowNoFlex>
       <div style={{ paddingRight: 16 }}>
@@ -35,7 +35,9 @@ export default function TransactionPopup({
       </div>
       <AutoColumn gap="8px">
         <TYPE.body fontWeight={500}>{summary ?? 'Hash: ' + hash.slice(0, 8) + '...' + hash.slice(58, 65)}</TYPE.body>
-        {chainId && <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')}>View on HooScan</ExternalLink>}
+        {chainId && (
+          <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')}>View on {chainSymbol}</ExternalLink>
+        )}
       </AutoColumn>
     </RowNoFlex>
   )

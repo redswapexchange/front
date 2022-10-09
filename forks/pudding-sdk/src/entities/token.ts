@@ -56,19 +56,21 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
+const chainSymbol = 'ALYX'
+
 export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0xCD05c66643b9AbeCbD2Bf3c7F4A08385aad7A723',
+    '0x3B955d688cc46548ff194462205614f2f39B4F1a',
     18,
-    'WHOO',
-    'Wrapped HOO'
+    chainSymbol,
+    `Wrapped ${chainSymbol}`
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
-    '0xCD05c66643b9AbeCbD2Bf3c7F4A08385aad7A723',
+    '0x3B955d688cc46548ff194462205614f2f39B4F1a',
     18,
-    'WHOO',
-    'Wrapped HOO'
+    chainSymbol,
+    `Wrapped ${chainSymbol}`
   )
 }

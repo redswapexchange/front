@@ -123,8 +123,8 @@ export default function SwapModalFooter({
                   treasuryFee: '0.15%',
                   teamFee: '0.05%',
                   buybackFee: '0.05%',
-                  token: 'PUD',
-                  team: 'PuddingSwap'
+                  token: 'ALYX',
+                  team: 'ALYX Swap'
                 }
               )}
             />

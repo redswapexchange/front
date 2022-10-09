@@ -273,7 +273,7 @@ export default function WalletModal({
       )
     })
   }
-
+  const chainSymbol = process.env.REACT_APP_CHAIN_SYMBOL
   function getModalContent() {
     if (error) {
       return (
@@ -284,9 +284,7 @@ export default function WalletModal({
           <HeaderRow>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Error connecting'}</HeaderRow>
           <ContentWrapper>
             {error instanceof UnsupportedChainIdError ? (
-              <h5>
-                Please connect to Hoo Chain network.
-              </h5>
+              <h5>Please connect to {chainSymbol} Chain network.</h5>
             ) : (
               'Error connecting. Try refreshing the page.'
             )}

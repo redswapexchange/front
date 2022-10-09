@@ -16,8 +16,8 @@ var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 100] = "MAINNET";
-  ChainId[ChainId["TESTNET"] = 101] = "TESTNET";
+  ChainId[ChainId["MAINNET"] = 135] = "MAINNET";
+  ChainId[ChainId["TESTNET"] = 1350] = "TESTNET";
 })(ChainId || (ChainId = {}));
 
 var TradeType;
@@ -35,7 +35,7 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0xFBd879B24A65559da3D7F7591FCE659115420Ba9';
+var FACTORY_ADDRESS = '0x49dbb0E56DFc011dde7C6c6432A770825ddA763F';
 var INIT_CODE_HASH = '0xbfeebd3982986f9e510c57c9d540cabc15ede1535ef6d7c9af9773983414608a';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
@@ -346,6 +346,7 @@ function sortedInsert(items, add, maxSize, comparator) {
   }
 }
 
+var chainSymbol = 'ALYX';
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
  *
@@ -369,7 +370,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'HOO', 'HOO');
+Currency.ETHER = /*#__PURE__*/new Currency(18, chainSymbol, chainSymbol);
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -435,7 +436,8 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xCD05c66643b9AbeCbD2Bf3c7F4A08385aad7A723', 18, 'WHOO', 'Wrapped HOO'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xCD05c66643b9AbeCbD2Bf3c7F4A08385aad7A723', 18, 'WHOO', 'Wrapped HOO'), _WETH);
+var chainSymbol$1 = 'ALYX';
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0x3B955d688cc46548ff194462205614f2f39B4F1a', 18, chainSymbol$1, "Wrapped " + chainSymbol$1), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0x3B955d688cc46548ff194462205614f2f39B4F1a', 18, chainSymbol$1, "Wrapped " + chainSymbol$1), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);

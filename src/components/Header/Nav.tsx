@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import TranslatedText from '../TranslatedText'
 
 const Nav: React.FC = () => {
-  const [isMore, setIsMore] = useState(false)
+  // const [isMore, setIsMore] = useState(false)
 
   return (
     <StyledNav>
-      <StyledAbsoluteLink href="https://puddingswap.finance/farms">
+      {/* <StyledAbsoluteLink href="https://puddingswap.finance/farms">
         <TranslatedText translationId={198}>Farm</TranslatedText>
       </StyledAbsoluteLink>
       <StyledAbsoluteLink href="https://puddingswap.finance/staking">
@@ -18,10 +18,10 @@ const Nav: React.FC = () => {
       </StyledAbsoluteLink>
       <StyledAbsoluteLink href="https://puddingswap.finance/ePud">
         <TranslatedText translationId={218}>ePUD Pools</TranslatedText>
-      </StyledAbsoluteLink>
+      </StyledAbsoluteLink> */}
       {/* <StyledAbsoluteLink href="https://puddingswap.finance/chefnft">NFT</StyledAbsoluteLink> */}
 
-      <div
+      {/* <div
         style={{ height: '20px', width: '28px', marginRight: '24px' }}
         onMouseLeave={el => {
           setIsMore(false)
@@ -55,12 +55,12 @@ const Nav: React.FC = () => {
             </MoreBoxItem>
           )}
         </StyledAbsoluteLink>
-      </div>
+      </div> */}
 
-      <StyledAbsoluteLink href="https://exchange.puddingswap.finance/" className="active">
+      <StyledAbsoluteLink href="/" className="active">
         <TranslatedText translationId={202}>Exchange</TranslatedText>
       </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://puddingswap.finance/ido" className="active">
+      {/* <StyledAbsoluteLink href="https://puddingswap.finance/ido" className="active">
         IDO
       </StyledAbsoluteLink>
       <StyledAbsoluteLink href="https://info.puddingswap.finance">
@@ -68,7 +68,7 @@ const Nav: React.FC = () => {
       </StyledAbsoluteLink>
       <StyledAbsoluteLink href="https://voting.puddingswap.finance">
         <TranslatedText translationId={370}>Voting</TranslatedText>
-      </StyledAbsoluteLink>
+      </StyledAbsoluteLink> */}
     </StyledNav>
   )
 }
@@ -93,20 +93,20 @@ const StyledAbsoluteLink = styled.a`
   }
 `
 
-const MoreBoxItem = styled.div`
-  position: absolute;
-  color: rgba(127, 134, 143, 1);
-  white-space: nowrap;
-  margin-left: -23px;
-  background: white;
-  width: 100px;
-  height: 77px;
-  margin-top: 6px;
-  padding: 0 16px;
-  border-radius: 14px;
-  & > div:nth-child(2) {
-    margin-top: 20px;
-  }
-`
+// const MoreBoxItem = styled.div`
+//   position: absolute;
+//   color: rgba(127, 134, 143, 1);
+//   white-space: nowrap;
+//   margin-left: -23px;
+//   background: white;
+//   width: 100px;
+//   height: 77px;
+//   margin-top: 6px;
+//   padding: 0 16px;
+//   border-radius: 14px;
+//   & > div:nth-child(2) {
+//     margin-top: 20px;
+//   }
+// `
 
 export default Nav

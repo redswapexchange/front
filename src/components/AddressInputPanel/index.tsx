@@ -92,6 +92,8 @@ export default function AddressInputPanel({
 
   const error = Boolean(value.length > 0 && !loading && !address)
 
+  const chainSymbol = process.env.REACT_APP_CHAIN_SYMBOL
+
   return (
     <InputPanel id={id}>
       <ContainerRow error={error}>
@@ -103,7 +105,7 @@ export default function AddressInputPanel({
               </TYPE.black>
               {address && chainId && (
                 <ExternalLink href={getEtherscanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
-                  (View on HooScan)
+                  (View on {chainSymbol})
                 </ExternalLink>
               )}
             </RowBetween>

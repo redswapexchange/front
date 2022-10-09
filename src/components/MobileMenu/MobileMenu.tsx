@@ -3,9 +3,9 @@ import styled, { keyframes } from 'styled-components'
 
 import { NavLink } from 'react-router-dom'
 import TranslatedText from '../TranslatedText'
-import LngSwith from '../Header/LngSwith'
-import useHTPrice from '../../hooks/useHtPrice'
-import { useActiveWeb3React } from '../../hooks'
+// import LngSwith from '../Header/LngSwith'
+// import useHTPrice from '../../hooks/useHtPrice'
+// import { useActiveWeb3React } from '../../hooks'
 import TopDecoration from './TopDecoration'
 import BottomDecoration from './BottomDecoration'
 
@@ -14,14 +14,14 @@ interface MobileMenuProps {
   visible?: boolean
 }
 
-function isZero(num: number) {
-  return Math.abs(num - 0) <= 1e-8
-}
+// function isZero(num: number) {
+//   return Math.abs(num - 0) <= 1e-8
+// }
 
 // eslint-disable-next-line react/prop-types
 const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
-  const { pippiPrice } = useHTPrice()
-  const { account } = useActiveWeb3React()
+  // const { pippiPrice } = useHTPrice()
+  // const { account } = useActiveWeb3React()
   if (visible) {
     return (
       <StyledMobileMenuWrapper>
@@ -30,7 +30,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
           <Bg></Bg>
           <TopDecoration />
           <BottomDecoration />
-          <Cn>
+          {/* <Cn>
             <StyledAbsoluteLink href="https://puddingswap.finance">
               <TranslatedText translationId={130}>Home</TranslatedText>
             </StyledAbsoluteLink>
@@ -62,13 +62,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             <StyledAbsoluteLink href="https://puddingswap.finance/Synthesiser">
               <TranslatedText translationId="Pudding Making">Pudding Making</TranslatedText>
             </StyledAbsoluteLink>
-          </Cn>
+          </Cn> */}
           <Cn>
             <StyledLink className="active" to="/">
               <TranslatedText translationId={202}>Exchange</TranslatedText>
             </StyledLink>
           </Cn>
-          <Cn>
+          {/* <Cn>
             <StyledAbsoluteLink href="https://puddingswap.finance/ido">IDO</StyledAbsoluteLink>
           </Cn>
           <Cn>
@@ -80,11 +80,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             <StyledAbsoluteLink href="https://voting.puddingswap.finance">
               <TranslatedText translationId={370}>Voting</TranslatedText>
             </StyledAbsoluteLink>
-          </Cn>
-          <Bottom>
+          </Cn> */}
+          {/* <Bottom>
             {account && !isZero(pippiPrice) && <Price className="number">1PUD=${pippiPrice.toFixed(3)}</Price>}
             <LngSwith className="mobile-lng-swith"></LngSwith>
-          </Bottom>
+          </Bottom> */}
         </StyledMobileMenu>
       </StyledMobileMenuWrapper>
     )
@@ -92,22 +92,22 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
   return null
 }
 
-const Bottom = styled.div`
-  position: absolute;
-  left: 0;
-  z-index: 1000;
-  width: 80%;
-  bottom: 120px;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  .mobile-lng-swith {
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 20px;
-  }
-`
+// const Bottom = styled.div`
+//   position: absolute;
+//   left: 0;
+//   z-index: 1000;
+//   width: 80%;
+//   bottom: 120px;
+//   right: 0;
+//   margin: auto;
+//   text-align: center;
+//   .mobile-lng-swith {
+//     width: 100%;
+//     height: 30px;
+//     line-height: 30px;
+//     margin-bottom: 20px;
+//   }
+// `
 
 const Bg = styled.div`
   position: absolute;
@@ -170,27 +170,27 @@ const StyledLink = styled(NavLink)`
     color: ${props => props.theme.colors.red3};
   }
 `
-const StyledAbsoluteLink = styled.a`
-  position: relative;
-  color: rgb(127, 134, 143);
-  font-weight: 700;
-  text-decoration: none;
-  &:hover {
-    color: ${props => props.theme.colors.red3};
-  }
-  &.active {
-    color: ${props => props.theme.colors.red3};
-  }
-`
+// const StyledAbsoluteLink = styled.a`
+//   position: relative;
+//   color: rgb(127, 134, 143);
+//   font-weight: 700;
+//   text-decoration: none;
+//   &:hover {
+//     color: ${props => props.theme.colors.red3};
+//   }
+//   &.active {
+//     color: ${props => props.theme.colors.red3};
+//   }
+// `
 const Cn = styled.div`
   margin: 24px 24px 0 24px;
 `
-const Price = styled.div`
-  width: 100%;
-  padding-top: 22px;
-  padding-bottom: 10px;
-  color: ${props => props.theme.colors.primary};
-  text-align: left;
-  font-weight: bolder;
-`
+// const Price = styled.div`
+//   width: 100%;
+//   padding-top: 22px;
+//   padding-bottom: 10px;
+//   color: ${props => props.theme.colors.primary};
+//   text-align: left;
+//   font-weight: bolder;
+// `
 export default MobileMenu
