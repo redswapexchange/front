@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 import TranslatedText from '../TranslatedText'
 // import LngSwith from '../Header/LngSwith'
 // import useHTPrice from '../../hooks/useHtPrice'
@@ -10,11 +10,15 @@ import TranslatedText from '../TranslatedText'
 // import BottomDecoration from './BottomDecoration'
 
 import swapNav from '../../assets/images/swapNav.png'
-// import swapHoverNav from '../../assets/images/swapHoverNav.png'
+import swapHoverNav from '../../assets/images/swapHoverNav.png'
 
-import liquitdiNvg from '../../assets/images/liquitdiNvg.png'
+import liquidityNav from '../../assets/images/liquitdiNvg.png'
+import liquidityHoverNav from '../../assets/images/liquitdiHoverNvg.png'
 import chartNav from '../../assets/images/chartNav.png'
+import chartHoverNav from '../../assets/images/chartHoverNav.png'
 import codeNav from '../../assets/images/codeNav.png'
+import codeHoverNav from '../../assets/images/codeHoverNav.png'
+
 import logo from '../../assets/images/logo3.png'
 
 interface MobileMenuProps {
@@ -28,6 +32,24 @@ interface MobileMenuProps {
 
 // eslint-disable-next-line react/prop-types
 const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
+  const history = useHistory()
+
+  const [currPath, setCurrPath] = useState<string>()
+
+  useEffect(() => {
+    const { location } = history
+    setCurrPath(location.pathname)
+    history.listen(historyLocation => {
+      // 每次路由变化都会执行这个方法
+      setCurrPath(historyLocation.pathname)
+      console.log(currPath)
+    })
+  }, [history, currPath])
+
+  function textColor(bl: boolean) {
+    if (bl) return { color: '#c63745' }
+    return {}
+  }
   // const { pippiPrice } = useHTPrice()
   // const { account } = useActiveWeb3React()
   if (visible) {
@@ -75,20 +97,25 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledAbsoluteLink>
           </Cn> */}
           <Cn>
-            <StyledLink className="active" to="/">
-              <img className="navImg" src={swapNav} alt="" sizes="" />
-              <span className="navText">
+            <StyledLink to="/swap">
+              <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
+              <span className="navText" style={textColor(currPath === '/swap')}>
                 <TranslatedText translationId={202}>Swap</TranslatedText>
               </span>
             </StyledLink>
           </Cn>
           <Cn>
-            <StyledAbsoluteLink href="/">
-              <img className="navImg" src={liquitdiNvg} alt="" sizes="" />
-              <span className="navText">
+            <StyledLink to={'/pool'}>
+              <img
+                className="navImg"
+                src={currPath !== '/' && currPath !== '/swap' ? liquidityHoverNav : liquidityNav}
+                alt=""
+                sizes=""
+              />
+              <span className="navText" style={textColor(currPath !== '/' && currPath !== '/swap')}>
                 <TranslatedText translationId={202}>Liquidity</TranslatedText>
               </span>
-            </StyledAbsoluteLink>
+            </StyledLink>
           </Cn>
           <Cn>
             <StyledAbsoluteLink href="/">
@@ -201,6 +228,19 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    &.swap-nav {
+      .navImg {
+        content: url(${swapHoverNav});
+      }
+    }
+    &.pool-nav {
+      .navImg {
+        content: url(${liquidityHoverNav});
+      }
+    }
+  }
   .navImg {
     height: 20px;
     width: auto;
@@ -221,6 +261,19 @@ const StyledAbsoluteLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    &.chart-nav {
+      .navImg {
+        content: url(${chartHoverNav});
+      }
+    }
+    &.code-nav {
+      .navImg {
+        content: url(${codeHoverNav});
+      }
+    }
+  }
   .navText {
     padding-left: 10px;
     font-size: 16px;

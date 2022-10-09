@@ -12,7 +12,8 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ isDark }) => {
   return (
     <StyledLogo>
-      <img className="logo-img" src={isDark ? logoDark : logoLight} alt="logo" />
+      {/* <img className="logo-img" src={isDark ? logoDark : logoLight} alt="logo" /> */}
+      {!isMobile && <img className="logo-img" src={isDark ? logoDark : logoLight} alt="logo" />}
       {/* <div className="text">REDSWAP</div> */}
       {!isMobile && <img className="red-log-img" src={redswapsvg} alt="" />}
     </StyledLogo>

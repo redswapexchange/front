@@ -1,16 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import TranslatedText from '../TranslatedText'
 import swapNav from '../../assets/images/swapNav.png'
 import swapHoverNav from '../../assets/images/swapHoverNav.png'
 
 import liquidityNav from '../../assets/images/liquitdiNvg.png'
+import liquidityHoverNav from '../../assets/images/liquitdiHoverNvg.png'
 import chartNav from '../../assets/images/chartNav.png'
+import chartHoverNav from '../../assets/images/chartHoverNav.png'
 import codeNav from '../../assets/images/codeNav.png'
-import { NavLink } from 'react-router-dom'
+import codeHoverNav from '../../assets/images/codeHoverNav.png'
+import { NavLink, useHistory } from 'react-router-dom'
 
 const Nav: React.FC = () => {
   // const [isMore, setIsMore] = useState(false)
+
+  const history = useHistory()
+
+  const [currPath, setCurrPath] = useState<string>()
+
+  useEffect(() => {
+    const { location } = history
+    setCurrPath(location.pathname)
+    history.listen(historyLocation => {
+      // 每次路由变化都会执行这个方法
+      setCurrPath(historyLocation.pathname)
+      console.log(currPath)
+    })
+  }, [history, currPath])
+
+  function textColor(bl: boolean) {
+    if (bl) return { color: '#c63745' }
+    return {}
+  }
 
   return (
     <StyledNav>
@@ -64,28 +86,33 @@ const Nav: React.FC = () => {
         </StyledAbsoluteLink>
       </div> */}
 
-      <StyledLink to={'/'} className="active">
-        <img className="navImg" src={swapNav} alt="" sizes="" />
-        <span className="navText">
+      <StyledLink className="swap-nav" to={'/'}>
+        <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
+        <span className="navText" style={textColor(currPath === '/swap')}>
           <TranslatedText translationId={202}>Swap</TranslatedText>
         </span>
       </StyledLink>
 
-      <StyledLink to={'/pool'}>
-        <img className="navImg" src={liquidityNav} alt="" sizes="" />
-        <span className="navText">
+      <StyledLink className="pool-nav" to={'/pool'}>
+        <img
+          className="navImg"
+          src={currPath !== '/' && currPath !== '/swap' ? liquidityHoverNav : liquidityNav}
+          alt=""
+          sizes=""
+        />
+        <span className="navText" style={textColor(currPath !== '/' && currPath !== '/swap')}>
           <TranslatedText translationId={202}>Liquidity</TranslatedText>
         </span>
       </StyledLink>
 
-      <StyledAbsoluteLink href="/">
+      <StyledAbsoluteLink className="chart-nav" href="/">
         <img className="navImg" src={chartNav} alt="" sizes="" />
         <span className="navText">
           <TranslatedText translationId={202}>Chart</TranslatedText>
         </span>
       </StyledAbsoluteLink>
 
-      <StyledAbsoluteLink href="/">
+      <StyledAbsoluteLink className="code-nav" href="/">
         <img className="navImg" src={codeNav} alt="" sizes="" />
         <span className="navText">
           <TranslatedText translationId={202}>Code</TranslatedText>
@@ -119,10 +146,20 @@ const StyledLink = styled(NavLink)`
   align-items: center;
   margin-right: 40px;
   background-size: auto 20px;
-  // &:hover {
-  //   color: ${({ theme }) => theme.colors.primary};
-  //   background-image: url(${swapHoverNav});
-  // }
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    &.swap-nav {
+      .navImg {
+        content: url(${swapHoverNav});
+      }
+    }
+    &.pool-nav {
+      .navImg {
+        content: url(${liquidityHoverNav});
+      }
+    }
+  }
+
   .navText {
     padding-left: 10px;
     font-size: 16px;
@@ -145,10 +182,19 @@ const StyledAbsoluteLink = styled.a`
   align-items: center;
   margin-right: 40px;
   background-size: auto 20px;
-  // &:hover {
-  //   color: ${({ theme }) => theme.colors.primary};
-  //   background-image: url(${swapHoverNav});
-  // }
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    &.chart-nav {
+      .navImg {
+        content: url(${chartHoverNav});
+      }
+    }
+    &.code-nav {
+      .navImg {
+        content: url(${codeHoverNav});
+      }
+    }
+  }
   .navText {
     padding-left: 10px;
     font-size: 16px;
