@@ -11,7 +11,8 @@ export default {
     text4: '#C3C5CB',
 
     // backgrounds / greys
-    bg0: 'rgb(244, 247, 250)',
+    // bg0: 'rgb(244, 247, 250)',
+    bg0: 'rgb(250, 248, 245)',
     bg1: '#fff',
     bg2: '#F5F3F3',
     bg3: '#EDEEF2',
