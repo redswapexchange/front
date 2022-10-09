@@ -25,7 +25,6 @@ const Nav: React.FC = () => {
     history.listen(historyLocation => {
       // 每次路由变化都会执行这个方法
       setCurrPath(historyLocation.pathname)
-      console.log(currPath)
     })
   }, [history, currPath])
 
