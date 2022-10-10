@@ -124,7 +124,7 @@ export default function SwapModalFooter({
                   teamFee: '0.05%',
                   buybackFee: '0.05%',
                   token: 'ALYX',
-                  team: 'ALYX Swap'
+                  team: 'RedSwap'
                 }
               )}
             />

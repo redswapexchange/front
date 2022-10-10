@@ -72,7 +72,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
                   teamFee: '0.05%',
                   buybackFee: '0.05%',
                   token: 'ALYX',
-                  team: 'ALYX Swap'
+                  team: ' RedSwap'
                 }
               )}
             />
