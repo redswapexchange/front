@@ -57,9 +57,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
         <StyledBackdrop onClick={onDismiss} />
         <StyledMobileMenu>
           <Bg></Bg>
-          <div className="logo-div">
+          <LogoLink to={'/'}>
             <img src={logo} alt="" />
-          </div>
+          </LogoLink>
           {/* <TopDecoration />
           <BottomDecoration /> */}
           {/* <Cn>
@@ -207,13 +207,14 @@ const StyledMobileMenu = styled.div`
   bottom: 0;
   width: calc(100% - 130px);
   padding-top: 24px;
-  .logo-div {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    img {
-      max-width: 50%;
-    }
+`
+
+const LogoLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  img {
+    max-width: 50%;
   }
 `
 

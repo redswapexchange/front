@@ -2,17 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 import { ExternalLink } from '../Shared'
 
+// const InfoCard = styled.button<{ active?: boolean }>`
+//   background-color: ${({ theme, active }) => (active ? theme.colors.bg3 : theme.colors.bg2)};
+//   padding: 1rem;
+//   outline: none;
+//   border: 1px solid;
+//   border-radius: 12px;
+//   width: 100% !important;
+//   &:focus {
+//     box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.primary1};
+//   }
+//   border-color: ${({ theme, active }) => (active ? 'transparent' : theme.colors.bg3)};
+// `
+
 const InfoCard = styled.button<{ active?: boolean }>`
-  background-color: ${({ theme, active }) => (active ? theme.colors.bg3 : theme.colors.bg2)};
+  background-color: rgb(237, 238, 242);
   padding: 1rem;
   outline: none;
   border: 1px solid;
   border-radius: 12px;
   width: 100% !important;
-  &:focus {
-    box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.primary1};
-  }
-  border-color: ${({ theme, active }) => (active ? 'transparent' : theme.colors.bg3)};
+  border-color: rgb(206, 208, 217);
 `
 
 const OptionCard = styled(InfoCard as any)`

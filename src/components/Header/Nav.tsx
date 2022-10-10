@@ -85,7 +85,7 @@ const Nav: React.FC = () => {
         </StyledAbsoluteLink>
       </div> */}
 
-      <StyledLink className="swap-nav" to={'/'}>
+      <StyledLink className="swap-nav" to={'/swap'}>
         <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
         <span className="navText" style={textColor(currPath === '/swap')}>
           <TranslatedText translationId={202}>Swap</TranslatedText>

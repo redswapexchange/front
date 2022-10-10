@@ -1,6 +1,7 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { isMobile } from 'react-device-detect'
 // import { Text } from 'rebass'
+import { useHistory } from 'react-router-dom'
 
 import styled from 'styled-components'
 import Settings from '../Settings'
@@ -114,16 +115,30 @@ const StyledAccountButtonWrapper = styled.div`
 
 export default function Header() {
   const isDark = useIsDarkMode()
+  const history = useHistory()
   // const { pippiPrice } = useHtPrice()
   const [mobileMenu, setMobileMenu] = useState(false)
+
+  // 首页不展示导航
+  const [isShow, setIsShow] = useState(false)
   const handlePresentMobileMenu = useCallback(() => {
     setMobileMenu(true)
   }, [setMobileMenu])
   const handleDismissMobileMenu = useCallback(() => {
     setMobileMenu(false)
   }, [setMobileMenu])
+
+  useEffect(() => {
+    const { location } = history
+    setIsShow(location.pathname !== '/' && location.pathname !== '/home')
+    history.listen(historyLocation => {
+      const { pathname } = historyLocation
+      setIsShow(pathname !== '/' && pathname !== '/home')
+    })
+  }, [history])
+
   return (
-    <HeaderFrame>
+    <HeaderFrame style={isShow ? {} : { display: 'none' }}>
       <StyledTopBarInner>
         <HeaderElement>
           <Menu onClick={handlePresentMobileMenu}>
