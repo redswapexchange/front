@@ -15,6 +15,7 @@ import { AutoRow, RowBetween } from '../../components/Row'
 import AdvancedSwapDetailsDropdown from '../../components/swap/AdvancedSwapDetailsDropdown'
 import BetterTradeLink from '../../components/swap/BetterTradeLink'
 import confirmPriceImpactWithoutFee from '../../components/swap/confirmPriceImpactWithoutFee'
+// import ConfirmPriceWithoutFeeModal from '../../components/swap/confirmPriceModalWithoutFee'
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from '../../components/swap/styleds'
 import TradePrice from '../../components/swap/TradePrice'
 import TokenWarningModal from '../../components/TokenWarningModal'
@@ -46,6 +47,7 @@ import AppBody from '../AppBody'
 import { ClickableText } from '../Pool/styleds'
 import Loader from '../../components/Loader'
 import { useI18n } from 'i18n/i18n-react'
+
 // import BottomDecoration from './BottomDecoration'
 // import RightDecoration from './RightDecoration'
 
@@ -207,6 +209,7 @@ export default function Swap() {
     if (priceImpactWithoutFee && !confirmPriceImpactWithoutFee(priceImpactWithoutFee)) {
       return
     }
+
     if (!swapCallback) {
       return
     }

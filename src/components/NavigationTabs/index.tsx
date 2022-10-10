@@ -87,9 +87,10 @@ const TabHeader = styled.div`
       align-items: center;
     }
     .title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       padding-left: 15px;
+      text-transform: uppercase;
     }
   }
   .logo-img {

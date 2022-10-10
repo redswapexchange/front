@@ -37,5 +37,6 @@
   "include": [
     "src/index.tsx",
     "src/react-app-env.d.ts",
+    "src/fonts.d.ts",
   ]
 }
