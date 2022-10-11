@@ -223,7 +223,7 @@ const StyledLink = styled(NavLink)`
   box-sizing: border-box;
   color: #282728;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   text-align: left;
   text-decoration: none;
   display: flex;
@@ -248,7 +248,7 @@ const StyledLink = styled(NavLink)`
   .navText {
     padding-left: 10px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
   }
   &.active {
     color: ${props => props.theme.colors.red3};
@@ -257,7 +257,7 @@ const StyledLink = styled(NavLink)`
 const StyledAbsoluteLink = styled.a`
   position: relative;
   color: #282728;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -277,7 +277,7 @@ const StyledAbsoluteLink = styled.a`
   .navText {
     padding-left: 10px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
   }
   .navImg {
     height: 20px;
