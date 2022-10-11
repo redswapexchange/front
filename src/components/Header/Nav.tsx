@@ -161,8 +161,8 @@ const StyledLink = styled(NavLink)`
 
   .navText {
     padding-left: 10px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
   }
   @media (max-width: 400px) {
     margin-right: 24px;
@@ -196,8 +196,8 @@ const StyledAbsoluteLink = styled.a`
   }
   .navText {
     padding-left: 10px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
   }
   @media (max-width: 400px) {
     margin-right: 24px;

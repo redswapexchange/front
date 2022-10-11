@@ -59,9 +59,9 @@ const StyledMenuButton = styled.button`
     margin-top: 2px;
   }
   .settingsSpan {
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 10px;
-    font-weight: 600;
+    font-weight: 500;
   }
   .setting-img {
     width: 32px;
