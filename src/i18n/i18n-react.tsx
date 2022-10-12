@@ -8,6 +8,9 @@ const resourcesLoader = {
 
 const I18N_LANGUAGE_KEY = 'i18n-language'
 
+// 保留英文
+localStorage.setItem(I18N_LANGUAGE_KEY, 'en')
+
 const defaultLanguage = localStorage.getItem(I18N_LANGUAGE_KEY) || 'en'
 
 const I18nLanguageContext = createContext<{
