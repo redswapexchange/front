@@ -1,6 +1,6 @@
 import invariant from 'tiny-invariant'
 import { ChainId } from '../constants'
-import { validateAndParseAddress } from '../utils'
+import { validateAndParseAddress, confInfo } from '../utils'
 import { Currency } from './currency'
 
 /**
@@ -56,19 +56,23 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
-const chainSymbol = 'ALYX'
+
+const {
+  chainSymbol,
+  weth
+} = confInfo
 
 export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0x3B955d688cc46548ff194462205614f2f39B4F1a',
+    weth,
     18,
     chainSymbol,
     `Wrapped ${chainSymbol}`
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
-    '0x3B955d688cc46548ff194462205614f2f39B4F1a',
+    'weth',
     18,
     chainSymbol,
     `Wrapped ${chainSymbol}`

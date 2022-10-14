@@ -80,3 +80,11 @@ export function sortedInsert<T>(items: T[], add: T, maxSize: number, comparator:
     return isFull ? items.pop()! : null
   }
 }
+
+
+export const confInfo = {
+  chainSymbol: 'ALYX',
+  codeHash: '0b4e2f6e42656ef2cc2fbdc009eacee814e567b419488f8ae6b3efc2c327b53a',
+  weth: '0x535619D38829873Fc9022BE3d717C2aB51d193Eb',
+  factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631'
+}

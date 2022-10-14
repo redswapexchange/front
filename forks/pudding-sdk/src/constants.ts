@@ -1,4 +1,5 @@
 import JSBI from 'jsbi'
+import {  confInfo } from './utils'
 
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
@@ -19,9 +20,14 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x49dbb0E56DFc011dde7C6c6432A770825ddA763F'
+const {
+  factory,
+  codeHash
+} = confInfo
 
-export const INIT_CODE_HASH = '0xbfeebd3982986f9e510c57c9d540cabc15ede1535ef6d7c9af9773983414608a'
+export const FACTORY_ADDRESS = factory
+
+export const INIT_CODE_HASH = codeHash
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
