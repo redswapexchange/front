@@ -1,4 +1,6 @@
-const chainId = 14000
+import { confInfo } from '../utils'
+
+const chainId = confInfo.chainId
 
 export const contractAddresses = {
   sushi: {
@@ -6,13 +8,13 @@ export const contractAddresses = {
     // 170: '0x96D808A323d9eB1De23F7d82F83574e6969c5591',
   },
   weth: {
-    [chainId]: '0xBE1490094B78946d0A42104eE8d166108075DCc3'
+    [chainId]: confInfo.weth
     // 170: '0x96D808A323d9eB1De23F7d82F83574e6969c5591',
   }
 }
 
 const multicall = {
-  [chainId]: '0x09F67cfA0Bf612D96cF85b78dafb872166459ABA'
+  [chainId]: confInfo.multiCall
   // 70: '0x03fF6895aB1Fdff998665E34368B69a032F50578',
 }
 

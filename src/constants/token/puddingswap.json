@@ -14,9 +14,9 @@
   ],
   "tokens": [
     {
-      "name": "PuddingSwap Token",
+      "name": "USDT",
       "symbol": "T1",
-      "address": "0xF511B76C9De9B53b7C99444FAF4C1B3AC41Dc860",
+      "address": "0xF69594dE2F8EC87bF02fc86ab439Ae3073776661",
       "chainId": 135,
       "decimals": 6,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xbE8D16084841875a1f398E6C3eC00bBfcbFa571b.png"
@@ -24,7 +24,7 @@
     {
       "name": "Bitcon",
       "symbol": "T2",
-      "address": "0xAC0eb282BFA56b8A7663619a023eC1e6aB9b035c",
+      "address": "0x7e10FE9D7Be2B89c584e03c33bEe4d79f3dcb5F9",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xAad9654a4df6973A92C1fd3e95281F0B37960CCd.png"
@@ -32,7 +32,7 @@
     {
       "name": "Ethereum",
       "symbol": "T3",
-      "address": "0x29956D74B09Acc2BAC5F6B377A812141551B9fB3",
+      "address": "0x65df5252A61D1454Ca525a61741Cc1Fe75854849",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xA1588dC914e236bB5AE4208Ce3081246f7A00193.png"
@@ -40,7 +40,7 @@
     {
       "name": "Bitcoin Cash",
       "symbol": "T4",
-      "address": "0xbDa7e509E6E23Ef4b3Ce12BE49a4Cf1f918ed794",
+      "address": "0xAF3986870C5E4143Ae941212A42062f1Cdc70c0B",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0x6705b383dEF2D9f3f93bc00C5FDe402613d2D695.png"
@@ -48,7 +48,7 @@
     {
       "name": "Litecoin",
       "symbol": "T5",
-      "address": "0x7889BE216552834Edaf3BE7B349712edA54267D8",
+      "address": "0x7B148668E28Eb371dF1Ad18C9294D1a6150fac4C",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0x13e93721DC992b3E14333dBdb48C0e7Ec55431c3.png"
@@ -56,7 +56,7 @@
     {
       "name": "Dogecoin",
       "symbol": "T6",
-      "address": "0x2596E8D47dfC397546A7C2EfF842106b13438fB3",
+      "address": "0x782E2A3d4449645285b9435B309eA4BB44c53056",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0x886dB4C7827e196ECc777eEB6a94C23c79B9467A.png"
@@ -64,7 +64,7 @@
     {
       "name": "Polkadot",
       "symbol": "T7",
-      "address": "0x6Df6388D90bdcbbBAeCe838165376ba59146B0A0",
+      "address": "0x5981005C97108b2e99132265d1d560501Bdaea02",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xA71e7ae7A5B154f1ED12476a4C54c5Ec6e3426AC.png"
@@ -72,7 +72,7 @@
     {
       "name": "Kusama",
       "symbol": "T8",
-      "address": "0xD5c9Fdfec6385CdA98E63bA54284978d5Df914AF",
+      "address": "0x0A79Fce944fFABeAf541C3997Fd1B3d1cbA9830e",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xe3f4F13ae64c1D5156d9bCff4b6a98a70fC32C57.png"
@@ -80,7 +80,7 @@
     {
       "name": "EOS",
       "symbol": "T9",
-      "address": "0x135e5BD83FC0063fA98Df0015d9CF642C4dea8F5",
+      "address": "0xE7358Ae87Cadd287f1ADbba6d5392AB4Cd55E195",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0x2D83F0551a65466Aa4872cf25693F4c3e834f602.png"
@@ -88,7 +88,7 @@
     {
       "name": "Ethereum Classic",
       "symbol": "T10",
-      "address": "0xEb5857ef3CDDb5A7cd09BB9D4DBf64d38451460f",
+      "address": "0xFBd879B24A65559da3D7F7591FCE659115420Ba9",
       "chainId": 135,
       "decimals": 18,
       "logoURI": "https://exchange.puddingswap.finance/images/coins/0xfC523B7BfAb1656b36A57Ef35F9D5c738CbF1E6C.png"

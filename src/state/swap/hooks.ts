@@ -19,6 +19,7 @@ import useToggledVersion from '../../hooks/useToggledVersion'
 import { useUserSlippageTolerance } from '../user/hooks'
 import { computeSlippageAdjustedAmounts } from '../../utils/prices'
 import { useI18n } from 'i18n/i18n-react'
+import { confInfo } from '../../utils'
 
 export function useSwapState(): AppState['swap'] {
   return useSelector<AppState, AppState['swap']>(state => state.swap)
@@ -90,9 +91,9 @@ export function tryParseAmount(value?: string, currency?: Currency): CurrencyAmo
 }
 
 const BAD_RECIPIENT_ADDRESSES: string[] = [
-  '0x49dbb0E56DFc011dde7C6c6432A770825ddA763F', // v2 factory
-  '0xd6118915f49d2974d87dA6b6aE027A2f33380c16', // v2 router 01
-  '0x1440A97b3761D63a011eB5152A5A4CC1C47AaAc0' // v2 router 02
+  confInfo.factory, // v2 factory
+  confInfo.router1, // v2 router 01
+  confInfo.router2 // v2 router 02
 ]
 
 /**

@@ -1,10 +1,11 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap-libs/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
+import { confInfo } from '../utils'
 
 // import { bsc, fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 import { injected } from '../connectors'
 // TODO
-export const ROUTER_ADDRESS = '0x1440A97b3761D63a011eB5152A5A4CC1C47AaAc0'
+export const ROUTER_ADDRESS = confInfo.router2
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -12,14 +13,8 @@ type ChainTokenList = {
 }
 
 // export const HUSD = new Token(ChainId.MAINNET, '0x92a0bD4584c147D1B0e8F9185dB0BDa10B05Ed7e', 6, 'HUSD', 'Hoo-Peg USDC Token')
-export const USDT = new Token(
-  ChainId.MAINNET,
-  '0xD16bAbe52980554520F6Da505dF4d1b124c815a7',
-  6,
-  'USDT',
-  'Hoo-Peg Tether Token'
-)
-export const ETH = new Token(ChainId.MAINNET, '0xA1588dC914e236bB5AE4208Ce3081246f7A00193', 18, 'ETH', 'Hoo-Peg ETH')
+export const USDT = new Token(ChainId.MAINNET, confInfo.usdt, 6, 'USDT', 'Hoo-Peg Tether Token')
+export const ETH = new Token(ChainId.MAINNET, confInfo.weth, 18, 'ETH', 'Hoo-Peg ETH')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],

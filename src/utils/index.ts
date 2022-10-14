@@ -16,7 +16,9 @@ export const confInfo = {
   factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631',
   router1: '0xce8BA936640f63dED48689250FfdA7F1E0a2AD4D',
   router2: '0x18D5a456b4131d2F1d33a54a7696b17986B820a0',
-  multiCall: '0x93A87BCCF3377E35B242EE7FB1aF9dfAAd23f7Bd'
+  multiCall: '0x93A87BCCF3377E35B242EE7FB1aF9dfAAd23f7Bd',
+  usdt: '0xF69594dE2F8EC87bF02fc86ab439Ae3073776661',
+  chainId: 135
 }
 
 // returns the checksummed address if the address is valid, otherwise returns false
