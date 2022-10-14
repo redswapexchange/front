@@ -110,7 +110,6 @@ export default function RemoveLiquidity({
 
     const deadlineForSignature: number = Math.ceil(Date.now() / 1000) + deadline
 
-    
     const EIP712Domain = [
       { name: 'name', type: 'string' },
       { name: 'version', type: 'string' },

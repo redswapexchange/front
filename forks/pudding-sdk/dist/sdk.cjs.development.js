@@ -90,7 +90,7 @@ function sortedInsert(items, add, maxSize, comparator) {
 }
 var confInfo = {
   chainSymbol: 'ALYX',
-  codeHash: '0x0b4e2f6e42656ef2cc2fbdc009eacee814e567b419488f8ae6b3efc2c327b53a',
+  codeHash: '0x215874baffe8b8837946ade64c5ded4550e8ad1683cdf8375681d99aeca708aa',
   weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
   factory: '0xaB79cAbe4B8D110B35df0adAD65a02b9537A7da5',
   chainId: 135
