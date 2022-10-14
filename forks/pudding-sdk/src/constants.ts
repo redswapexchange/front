@@ -5,8 +5,8 @@ import {  confInfo } from './utils'
 export type BigintIsh = JSBI | bigint | string
 
 export enum ChainId {
-  MAINNET = 135,
-  TESTNET = 1350
+  MAINNET = confInfo.chainId,
+  TESTNET = confInfo.chainId
 }
 
 export enum TradeType {

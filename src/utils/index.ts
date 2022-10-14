@@ -8,6 +8,17 @@ import { ROUTER_ADDRESS } from '../constants'
 import { ChainId, JSBI, Percent, Token, CurrencyAmount, Currency, ETHER } from '@pancakeswap-libs/sdk'
 import { TokenAddressMap } from '../state/lists/hooks'
 
+// 基础配置
+export const confInfo = {
+  chainSymbol: 'ALYX',
+  explorerUrl: 'https://testnet.alyxscan.com',
+  weth: '0x535619D38829873Fc9022BE3d717C2aB51d193Eb',
+  factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631',
+  router1: '0xce8BA936640f63dED48689250FfdA7F1E0a2AD4D',
+  router2: '0x18D5a456b4131d2F1d33a54a7696b17986B820a0',
+  multiCall: '0x93A87BCCF3377E35B242EE7FB1aF9dfAAd23f7Bd'
+}
+
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value: any): string | false {
   try {
@@ -23,7 +34,7 @@ export function isAddress(value: any): string | false {
 // }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
-  const prefix = 'https://testnet.alyxscan.com' // `https://alyxscan.com`
+  const prefix = confInfo.explorerUrl // `https://alyxscan.com`
 
   switch (type) {
     case 'transaction': {

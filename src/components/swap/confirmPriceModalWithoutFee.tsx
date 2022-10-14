@@ -17,6 +17,7 @@ export default function ConfirmPriceWithoutFeeModal({
   return (
     <Modal isOpen={isOpen} onDismiss={onDismiss} maxHeight={90}>
       {priceImpactWithoutFee}
+      <span>yrd test</span>
 
       <div className="btn-div">
         <Button
