@@ -1,9 +1,8 @@
 import JSBI from 'jsbi'
 
 import { SolidityType } from '../constants'
-import { validateSolidityTypeInstance } from '../utils'
+import { validateSolidityTypeInstance, confInfo } from '../utils'
 
-const chainSymbol = 'ALYX'
 
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
@@ -18,7 +17,7 @@ export class Currency {
   /**
    * The only instance of the base class `Currency`.
    */
-  public static readonly ETHER: Currency = new Currency(18, chainSymbol, chainSymbol)
+  public static readonly ETHER: Currency = new Currency(18, confInfo.chainSymbol, confInfo.chainSymbol)
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.

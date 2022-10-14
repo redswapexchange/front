@@ -85,7 +85,7 @@ export function sortedInsert<T>(items: T[], add: T, maxSize: number, comparator:
 export const confInfo = {
   chainSymbol: 'ALYX',
   codeHash: '0x0b4e2f6e42656ef2cc2fbdc009eacee814e567b419488f8ae6b3efc2c327b53a',
-  weth: '0x535619D38829873Fc9022BE3d717C2aB51d193Eb',
-  factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631',
+  weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
+  factory: '0xaB79cAbe4B8D110B35df0adAD65a02b9537A7da5',
   chainId: 135
 }

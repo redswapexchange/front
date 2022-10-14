@@ -12,12 +12,12 @@ import { TokenAddressMap } from '../state/lists/hooks'
 export const confInfo = {
   chainSymbol: 'ALYX',
   explorerUrl: 'https://testnet.alyxscan.com',
-  weth: '0x535619D38829873Fc9022BE3d717C2aB51d193Eb',
+  weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
   factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631',
-  router1: '0xce8BA936640f63dED48689250FfdA7F1E0a2AD4D',
-  router2: '0x18D5a456b4131d2F1d33a54a7696b17986B820a0',
-  multiCall: '0x93A87BCCF3377E35B242EE7FB1aF9dfAAd23f7Bd',
-  usdt: '0xF69594dE2F8EC87bF02fc86ab439Ae3073776661',
+  router1: '0x30abBFBf2B5c42ee46C6d839C74FDc32ad3ae1E0',
+  router2: '0x6cC08de245c76bF57622048772880C67349cdb30',
+  multiCall: '0xfCFC1054BF824c7f87AEcd5020fD7403EcBB6038',
+  usdt: '0x8B19c7dB37e48A78c927A4f7293E6b26Fea13291',
   chainId: 135
 }
 

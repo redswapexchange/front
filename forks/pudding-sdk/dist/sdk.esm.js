@@ -12,7 +12,87 @@ import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
 import IPancakePair from '@pancakeswap-libs/pancake-swap-core/build/IPancakePair.json';
 
+function validateSolidityTypeInstance(value, solidityType) {
+  !JSBI.greaterThanOrEqual(value, ZERO) ? process.env.NODE_ENV !== "production" ? invariant(false, value + " is not a " + solidityType + ".") : invariant(false) : void 0;
+  !JSBI.lessThanOrEqual(value, SOLIDITY_TYPE_MAXIMA[solidityType]) ? process.env.NODE_ENV !== "production" ? invariant(false, value + " is not a " + solidityType + ".") : invariant(false) : void 0;
+} // warns if addresses are not checksummed
+
+function validateAndParseAddress(address) {
+  try {
+    var checksummedAddress = getAddress(address);
+    process.env.NODE_ENV !== "production" ? warning(address === checksummedAddress, address + " is not checksummed.") : void 0;
+    return checksummedAddress;
+  } catch (error) {
+     process.env.NODE_ENV !== "production" ? invariant(false, address + " is not a valid address.") : invariant(false) ;
+  }
+}
+function parseBigintIsh(bigintIsh) {
+  return bigintIsh instanceof JSBI ? bigintIsh : typeof bigintIsh === 'bigint' ? JSBI.BigInt(bigintIsh.toString()) : JSBI.BigInt(bigintIsh);
+} // mock the on-chain sqrt function
+
+function sqrt(y) {
+  validateSolidityTypeInstance(y, SolidityType.uint256);
+  var z = ZERO;
+  var x;
+
+  if (JSBI.greaterThan(y, THREE)) {
+    z = y;
+    x = JSBI.add(JSBI.divide(y, TWO), ONE);
+
+    while (JSBI.lessThan(x, z)) {
+      z = x;
+      x = JSBI.divide(JSBI.add(JSBI.divide(y, x), x), TWO);
+    }
+  } else if (JSBI.notEqual(y, ZERO)) {
+    z = ONE;
+  }
+
+  return z;
+} // given an array of items sorted by `comparator`, insert an item into its sort index and constrain the size to
+// `maxSize` by removing the last item
+
+function sortedInsert(items, add, maxSize, comparator) {
+  !(maxSize > 0) ? process.env.NODE_ENV !== "production" ? invariant(false, 'MAX_SIZE_ZERO') : invariant(false) : void 0; // this is an invariant because the interface cannot return multiple removed items if items.length exceeds maxSize
+
+  !(items.length <= maxSize) ? process.env.NODE_ENV !== "production" ? invariant(false, 'ITEMS_SIZE') : invariant(false) : void 0; // short circuit first item add
+
+  if (items.length === 0) {
+    items.push(add);
+    return null;
+  } else {
+    var isFull = items.length === maxSize; // short circuit if full and the additional item does not come before the last item
+
+    if (isFull && comparator(items[items.length - 1], add) <= 0) {
+      return add;
+    }
+
+    var lo = 0,
+        hi = items.length;
+
+    while (lo < hi) {
+      var mid = lo + hi >>> 1;
+
+      if (comparator(items[mid], add) <= 0) {
+        lo = mid + 1;
+      } else {
+        hi = mid;
+      }
+    }
+
+    items.splice(lo, 0, add);
+    return isFull ? items.pop() : null;
+  }
+}
+var confInfo = {
+  chainSymbol: 'ALYX',
+  codeHash: '0x0b4e2f6e42656ef2cc2fbdc009eacee814e567b419488f8ae6b3efc2c327b53a',
+  weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
+  factory: '0xaB79cAbe4B8D110B35df0adAD65a02b9537A7da5',
+  chainId: 135
+};
+
 var _SOLIDITY_TYPE_MAXIMA;
+
 var ChainId;
 
 (function (ChainId) {
@@ -35,8 +115,8 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x4B9264fc16c7895C438fDFd4E2798059Acd56631';
-var INIT_CODE_HASH = '0x0b4e2f6e42656ef2cc2fbdc009eacee814e567b419488f8ae6b3efc2c327b53a';
+var FACTORY_ADDRESS = confInfo.factory;
+var INIT_CODE_HASH = confInfo.codeHash;
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -274,79 +354,6 @@ var InsufficientInputAmountError = /*#__PURE__*/function (_Error2) {
   return InsufficientInputAmountError;
 }( /*#__PURE__*/_wrapNativeSuper(Error));
 
-function validateSolidityTypeInstance(value, solidityType) {
-  !JSBI.greaterThanOrEqual(value, ZERO) ? process.env.NODE_ENV !== "production" ? invariant(false, value + " is not a " + solidityType + ".") : invariant(false) : void 0;
-  !JSBI.lessThanOrEqual(value, SOLIDITY_TYPE_MAXIMA[solidityType]) ? process.env.NODE_ENV !== "production" ? invariant(false, value + " is not a " + solidityType + ".") : invariant(false) : void 0;
-} // warns if addresses are not checksummed
-
-function validateAndParseAddress(address) {
-  try {
-    var checksummedAddress = getAddress(address);
-    process.env.NODE_ENV !== "production" ? warning(address === checksummedAddress, address + " is not checksummed.") : void 0;
-    return checksummedAddress;
-  } catch (error) {
-     process.env.NODE_ENV !== "production" ? invariant(false, address + " is not a valid address.") : invariant(false) ;
-  }
-}
-function parseBigintIsh(bigintIsh) {
-  return bigintIsh instanceof JSBI ? bigintIsh : typeof bigintIsh === 'bigint' ? JSBI.BigInt(bigintIsh.toString()) : JSBI.BigInt(bigintIsh);
-} // mock the on-chain sqrt function
-
-function sqrt(y) {
-  validateSolidityTypeInstance(y, SolidityType.uint256);
-  var z = ZERO;
-  var x;
-
-  if (JSBI.greaterThan(y, THREE)) {
-    z = y;
-    x = JSBI.add(JSBI.divide(y, TWO), ONE);
-
-    while (JSBI.lessThan(x, z)) {
-      z = x;
-      x = JSBI.divide(JSBI.add(JSBI.divide(y, x), x), TWO);
-    }
-  } else if (JSBI.notEqual(y, ZERO)) {
-    z = ONE;
-  }
-
-  return z;
-} // given an array of items sorted by `comparator`, insert an item into its sort index and constrain the size to
-// `maxSize` by removing the last item
-
-function sortedInsert(items, add, maxSize, comparator) {
-  !(maxSize > 0) ? process.env.NODE_ENV !== "production" ? invariant(false, 'MAX_SIZE_ZERO') : invariant(false) : void 0; // this is an invariant because the interface cannot return multiple removed items if items.length exceeds maxSize
-
-  !(items.length <= maxSize) ? process.env.NODE_ENV !== "production" ? invariant(false, 'ITEMS_SIZE') : invariant(false) : void 0; // short circuit first item add
-
-  if (items.length === 0) {
-    items.push(add);
-    return null;
-  } else {
-    var isFull = items.length === maxSize; // short circuit if full and the additional item does not come before the last item
-
-    if (isFull && comparator(items[items.length - 1], add) <= 0) {
-      return add;
-    }
-
-    var lo = 0,
-        hi = items.length;
-
-    while (lo < hi) {
-      var mid = lo + hi >>> 1;
-
-      if (comparator(items[mid], add) <= 0) {
-        lo = mid + 1;
-      } else {
-        hi = mid;
-      }
-    }
-
-    items.splice(lo, 0, add);
-    return isFull ? items.pop() : null;
-  }
-}
-
-var chainSymbol = 'ALYX';
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
  *
@@ -370,7 +377,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, chainSymbol, chainSymbol);
+Currency.ETHER = /*#__PURE__*/new Currency(18, confInfo.chainSymbol, confInfo.chainSymbol);
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -435,13 +442,13 @@ function currencyEquals(currencyA, currencyB) {
   } else {
     return currencyA === currencyB;
   }
-}
-var chainSymbol$1 = 'ALYX'; // const {
+} // const chainSymbol = 'ALYX'
+// const {
 //   chainSymbol,
 //   weth
 // } = confInfo
 
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0x535619D38829873Fc9022BE3d717C2aB51d193Eb', 18, chainSymbol$1, "Wrapped " + chainSymbol$1), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0x535619D38829873Fc9022BE3d717C2aB51d193Eb', 18, chainSymbol$1, "Wrapped " + chainSymbol$1), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, confInfo.weth, 18, confInfo.chainSymbol, "Wrapped " + confInfo.chainSymbol), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, confInfo.weth, 18, confInfo.chainSymbol, "Wrapped " + confInfo.chainSymbol), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
