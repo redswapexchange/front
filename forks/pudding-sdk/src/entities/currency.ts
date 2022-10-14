@@ -1,9 +1,9 @@
 import JSBI from 'jsbi'
 
 import { SolidityType } from '../constants'
-import { validateSolidityTypeInstance, confInfo } from '../utils'
+import { validateSolidityTypeInstance } from '../utils'
 
-const { chainSymbol } = confInfo
+const chainSymbol = 'ALYX'
 
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.

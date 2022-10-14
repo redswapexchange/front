@@ -1,12 +1,11 @@
 import JSBI from 'jsbi'
-import {  confInfo } from './utils'
 
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
 
 export enum ChainId {
-  MAINNET = confInfo.chainId,
-  TESTNET = confInfo.chainId
+  MAINNET = 135,
+  TESTNET = 135
 }
 
 export enum TradeType {
@@ -20,14 +19,9 @@ export enum Rounding {
   ROUND_UP
 }
 
-const {
-  factory,
-  codeHash
-} = confInfo
+export const FACTORY_ADDRESS = '0x4B9264fc16c7895C438fDFd4E2798059Acd56631'
 
-export const FACTORY_ADDRESS = factory
-
-export const INIT_CODE_HASH = codeHash
+export const INIT_CODE_HASH = '0x0b4e2f6e42656ef2cc2fbdc009eacee814e567b419488f8ae6b3efc2c327b53a'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
