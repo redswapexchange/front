@@ -18,7 +18,8 @@ export const confInfo = {
   router2: '0xC60b166930D171692B0bFe4b16A0803d78BAEb99',
   multiCall: '0x6d792390f0760093A4d22581e3d9fD00f76f1b6E',
   usdt: '0xe0738b93174F3eA94269d5CC80807C69EE109caD',
-  chainId: 135
+  chainId: 135,
+  swapLps: 'Swap LPs'
 }
 
 // returns the checksummed address if the address is valid, otherwise returns false

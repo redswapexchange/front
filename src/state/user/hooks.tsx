@@ -21,6 +21,7 @@ import {
   unmuteAudio
 } from './actions'
 import { setThemeCache } from '../../utils/theme'
+import { confInfo } from '../../utils'
 
 function serializeToken(token: Token): SerializedToken {
   return {
@@ -186,7 +187,7 @@ export function usePairAdder(): (pair: Pair) => void {
  * @param tokenB the other token
  */
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
-  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'PUD-LP', 'PuddingSwap LPs')
+  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'PUD-LP', confInfo.swapLps)
 }
 
 /**

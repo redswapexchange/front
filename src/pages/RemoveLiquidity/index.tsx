@@ -42,6 +42,7 @@ import { useWalletModalToggle } from '../../state/application/hooks'
 import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hooks'
 import { useI18n } from 'i18n/i18n-react'
 import { BigNumber } from '@ethersproject/bignumber'
+import { confInfo } from '../../utils'
 
 export default function RemoveLiquidity({
   history,
@@ -117,7 +118,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'PuddingSwap LPs',
+      name: confInfo.swapLps,
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
