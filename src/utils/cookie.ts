@@ -1,4 +1,4 @@
-const defaultDomain = '.puddingswap.finance'
+const defaultDomain = '.redswap.exchange'
 // const getSubDomain = () => {
 //   const { hostname } = window.location
 //   const domains = hostname.split('.')
