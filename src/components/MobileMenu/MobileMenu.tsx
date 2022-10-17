@@ -60,41 +60,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
           <LogoLink to={'/'}>
             <img src={logo} alt="" />
           </LogoLink>
-          {/* <TopDecoration />
-          <BottomDecoration /> */}
-          {/* <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance">
-              <TranslatedText translationId={130}>Home</TranslatedText>
-            </StyledAbsoluteLink>
-          </Cn>
-          <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/farms">
-              <TranslatedText translationId={198}>Farm</TranslatedText>
-            </StyledAbsoluteLink>
-          </Cn>
-          <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/staking">
-              <TranslatedText translationId={200}>Staking</TranslatedText>
-            </StyledAbsoluteLink>
-          </Cn>
-          <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/pudvault">
-              <TranslatedText translationId="nav-pud-vault">LockVault</TranslatedText>
-            </StyledAbsoluteLink>
-          </Cn>
-          <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/ePUD">
-              <TranslatedText translationId={218}>ePUD Pools</TranslatedText>
-            </StyledAbsoluteLink>
-          </Cn>
-          <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/chefnft">NFT</StyledAbsoluteLink>
-          </Cn>
-          <Cn>
-            <StyledAbsoluteLink href="https://puddingswap.finance/Synthesiser">
-              <TranslatedText translationId="Pudding Making">Pudding Making</TranslatedText>
-            </StyledAbsoluteLink>
-          </Cn> */}
           <Cn>
             <StyledLink to="/swap">
               <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />

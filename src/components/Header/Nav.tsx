@@ -35,56 +35,6 @@ const Nav: React.FC = () => {
 
   return (
     <StyledNav>
-      {/* <StyledAbsoluteLink href="https://puddingswap.finance/farms">
-        <TranslatedText translationId={198}>Farm</TranslatedText>
-      </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://puddingswap.finance/staking">
-        <TranslatedText translationId={200}>Staking</TranslatedText>
-      </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://puddingswap.finance/pudvault">
-        <TranslatedText translationId="nav-pud-vault">LockVault</TranslatedText>
-      </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://puddingswap.finance/ePud">
-        <TranslatedText translationId={218}>ePUD Pools</TranslatedText>
-      </StyledAbsoluteLink> */}
-      {/* <StyledAbsoluteLink href="https://puddingswap.finance/chefnft">NFT</StyledAbsoluteLink> */}
-
-      {/* <div
-        style={{ height: '20px', width: '28px', marginRight: '24px' }}
-        onMouseLeave={el => {
-          setIsMore(false)
-        }}
-      >
-        <StyledAbsoluteLink href="https://puddingswap.finance/Synthesiser">
-          <div
-            onMouseOver={() => {
-              setIsMore(true)
-            }}
-          >
-            NFT
-          </div>
-
-          {isMore && (
-            <MoreBoxItem
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                width: '140px',
-                height: '77px',
-                justifyContent: 'space-around'
-              }}
-            >
-              <StyledAbsoluteLink href="https://puddingswap.finance/chefnft">
-                <TranslatedText translationId={'Blind Box'}>Blind Box</TranslatedText>
-              </StyledAbsoluteLink>
-              <StyledAbsoluteLink href="https://puddingswap.finance/Synthesiser">
-                <TranslatedText translationId={'Pudding Making'}>Pudding Making</TranslatedText>
-              </StyledAbsoluteLink>
-            </MoreBoxItem>
-          )}
-        </StyledAbsoluteLink>
-      </div> */}
-
       <StyledLink className="swap-nav" to={'/swap'}>
         <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
         <span className="navText" style={textColor(currPath === '/swap')}>
@@ -117,15 +67,6 @@ const Nav: React.FC = () => {
           <TranslatedText translationId={202}>Code</TranslatedText>
         </span>
       </StyledAbsoluteLink>
-      {/* <StyledAbsoluteLink href="https://puddingswap.finance/ido" className="active">
-        IDO
-      </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://info.puddingswap.finance">
-        <TranslatedText translationId={348}>Analytics</TranslatedText>
-      </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://voting.puddingswap.finance">
-        <TranslatedText translationId={370}>Voting</TranslatedText>
-      </StyledAbsoluteLink> */}
     </StyledNav>
   )
 }

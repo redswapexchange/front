@@ -160,7 +160,6 @@ export default function Header() {
             <HeaderElement>
               <StyledAccountButtonWrapper>
                 <Web3Status />
-                {/* {!isZero(pippiPrice) && <Price className="number price"><PriceLInk href="https://www.coingecko.com/en/exchanges/puddingswap" target="_blank" rel="noopener noreferrer"> 1PUD=${pippiPrice.toFixed(3)} </PriceLInk></Price>} */}
                 <AccountButton />
                 <Settings />
                 {/* <LngSwithForWeb /> */}

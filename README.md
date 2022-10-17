@@ -1,11 +1,11 @@
 
 ## Intro
 
-[PuddingSwap Finance](https://puddingswwap.finance/) is an automated market maker (“**AMM**”) that allows two tokens to be exchanged on the [Hoo Chain](https://docs.hoosmartchain.com/) (HSC). It is fast, cheap, and allows anyone to participate.
+[RedSwap Finance](https://www.redswap.exchange/) is an automated market maker (“**AMM**”) that allows two tokens to be exchanged on the [ALYX Chain](https://www.alyxscan.com/) (ALYX). It is fast, cheap, and allows anyone to participate.
 
 ##
 
-This repo is responsible for the **exchange/pool** interfaace of the AMM: [exchange.puddingswap.finance](https://exchange.pippi.finance/)
+This repo is responsible for the **exchange/pool** interfaace of the AMM: [redswap.exchange](https://www.redswap.exchange/)
 
 ## Run locally
 

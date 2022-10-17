@@ -13,8 +13,11 @@ type ChainTokenList = {
 }
 
 // export const HUSD = new Token(ChainId.MAINNET, '0x92a0bD4584c147D1B0e8F9185dB0BDa10B05Ed7e', 6, 'HUSD', 'Hoo-Peg USDC Token')
-export const USDT = new Token(ChainId.MAINNET, confInfo.usdt, 6, 'USDT', 'Hoo-Peg Tether Token')
-export const ETH = new Token(ChainId.MAINNET, confInfo.weth, 18, 'ETH', 'Hoo-Peg ETH')
+// export const USDT = new Token(ChainId.MAINNET, confInfo.usdt, 6, 'USDT', 'Hoo-Peg Tether Token')
+// export const ETH = new Token(ChainId.MAINNET, confInfo.weth, 18, 'ETH', 'Hoo-Peg ETH')
+
+export const USDT = new Token(ChainId.MAINNET, confInfo.usdt, 6, 'USDT', 'red-Peg Tether Token')
+export const ETH = new Token(ChainId.MAINNET, confInfo.weth, 18, 'ETH', 'red-Peg ETH')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -49,11 +52,21 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], USDT]
 }
 
+// export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
+//   [ChainId.MAINNET]: [
+//     [
+//       new Token(ChainId.MAINNET, '0xD0198483de27235c28B707AC65283D63Cc09DC63', 18, 'PUD', 'PuddingSwap Token'),
+//       new Token(ChainId.MAINNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WHOO', 'Wrapped HOO')
+//     ]
+//     // [USDT]
+//   ]
+// }
+
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0xD0198483de27235c28B707AC65283D63Cc09DC63', 18, 'PUD', 'PuddingSwap Token'),
-      new Token(ChainId.MAINNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WHOO', 'Wrapped HOO')
+      new Token(ChainId.MAINNET, '0xD0198483de27235c28B707AC65283D63Cc09DC63', 18, 'red', 'RedSwap Token'),
+      new Token(ChainId.MAINNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WETH', 'Wrapped WETH')
     ]
     // [USDT]
   ]
