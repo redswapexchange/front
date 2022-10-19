@@ -51,6 +51,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
   }
   // const { pippiPrice } = useHTPrice()
   // const { account } = useActiveWeb3React()
+  // const closeMenu = () => {};
+
   if (visible) {
     return (
       <StyledMobileMenuWrapper>
@@ -61,7 +63,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             <img src={logo} alt="" />
           </LogoLink>
           <Cn>
-            <StyledLink to="/swap">
+            <StyledLink to="/swap" onClick={onDismiss}>
               <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
               <span className="navText" style={textColor(currPath === '/swap')}>
                 <TranslatedText translationId={202}>Swap</TranslatedText>
@@ -69,7 +71,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledLink>
           </Cn>
           <Cn>
-            <StyledLink to={'/pool'}>
+            <StyledLink to={'/pool'} onClick={onDismiss}>
               <img
                 className="navImg"
                 src={currPath !== '/' && currPath !== '/swap' ? liquidityHoverNav : liquidityNav}
@@ -82,7 +84,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledLink>
           </Cn>
           <Cn>
-            <StyledAbsoluteLink href="/">
+            <StyledAbsoluteLink href="/" onClick={onDismiss}>
               <img className="navImg" src={chartNav} alt="" sizes="" />
               <span className="navText">
                 <TranslatedText translationId={202}>Chart</TranslatedText>
@@ -90,7 +92,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledAbsoluteLink>
           </Cn>
           <Cn>
-            <StyledAbsoluteLink href="/">
+            <StyledAbsoluteLink href="/" onClick={onDismiss}>
               <img className="navImg" src={codeNav} alt="" sizes="" />
               <span className="navText">
                 <TranslatedText translationId={202}>Code</TranslatedText>

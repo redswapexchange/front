@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const BodyWrapper = styled.div`
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 96%;
   background: ${({ theme }) => theme.colors.bg1};
   box-shadow: 0px 2px 10px rgba(171, 133, 115, 0.16);
   border-radius: 0;
