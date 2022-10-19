@@ -4,13 +4,17 @@ import styled from 'styled-components'
 export const BodyWrapper = styled.div`
   position: relative;
   width: 100%;
-  max-width: 96%;
+  max-width: 420px;
   background: ${({ theme }) => theme.colors.bg1};
   box-shadow: 0px 2px 10px rgba(171, 133, 115, 0.16);
   border-radius: 0;
   padding: 1rem;
   border-radius: 20px;
   overflow: hidden;
+
+  @media (max-width: 850px) {
+    max-width: 96%;
+  }
 `
 
 export const Container = styled.div`
