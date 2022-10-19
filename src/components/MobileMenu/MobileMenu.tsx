@@ -59,7 +59,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
         <StyledBackdrop onClick={onDismiss} />
         <StyledMobileMenu>
           <Bg></Bg>
-          <LogoLink to={'/'}>
+          <LogoLink to={'/'} onClick={onDismiss}>
             <img src={logo} alt="" />
           </LogoLink>
           <Cn>
