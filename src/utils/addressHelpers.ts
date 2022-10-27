@@ -29,6 +29,6 @@ export const getMulticallAddress = () => {
   return multicall[chainId]
 }
 
-export const getPipiAddress = () => {
+export const getAlyxAddress = () => {
   return getAddress(contractAddresses.sushi)
 }

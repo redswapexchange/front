@@ -11,6 +11,7 @@ import { TokenAddressMap } from '../state/lists/hooks'
 // 基础配置
 export const confInfo = {
   chainSymbol: 'ALYX',
+  chainCoin: 'ALYX',
   explorerUrl: 'https://testnet.alyxscan.com',
   weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
   factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631',

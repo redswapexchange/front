@@ -1,10 +1,7 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
 import userlogo from '../../assets/images/user-logo-gray.png'
-// import useHTPrice from '../../hooks/useHtPrice'
-// import useTokenBalance from '../../hooks/useTokenBalance'
-// import { getBalanceNumber } from '../../utils/formatBalance'
-// import { getPipiAddress } from '../../utils/addressHelpers'
+
 import { useI18n } from 'i18n/i18n-react'
 import { useWalletModalToggle } from '../../state/application/hooks'
 import { useActiveWeb3React } from '../../hooks'
@@ -16,11 +13,11 @@ export const CONNECTOR_STORAGE_ID = 'CONNECTOR_STORAGE_ID'
 
 const AccountButton: React.FC<{}> = () => {
   const i18n = useI18n()
-  // const { pippiPrice } = useHTPrice()
+
   const useActiveWeb3 = useActiveWeb3React()
 
   const { account, deactivate } = useActiveWeb3
-  // const sushiBalance = useTokenBalance(getPipiAddress() as any)
+  
   const toggleWalletModal = useWalletModalToggle()
   const handleSignOutClick = useCallback(() => {
     window.localStorage.removeItem(CONNECTOR_STORAGE_ID)

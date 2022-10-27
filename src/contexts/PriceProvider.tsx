@@ -41,7 +41,6 @@ const PriceProvider: React.FC = ({ children }) => {
         params: ['0xc755b69b0277d7c935466b41f266142d4a9d265b'],
       },
       {
-        // pudding
         address: '0xbE8D16084841875a1f398E6C3eC00bBfcbFa571b',
         name: 'balanceOf',
         // todo: replace address cake-bnb lp?

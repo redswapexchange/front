@@ -6,6 +6,7 @@ import { AutoRow, RowBetween } from '../Row'
 import { AutoColumn } from '../Column'
 import { AlertTriangle } from 'react-feather'
 import { ButtonError } from '../Button'
+import { confInfo } from '../../utils'
 
 const WarningContainer = styled.div`
   max-width: 420px;
@@ -40,17 +41,17 @@ export default function SyrupWarningModal({
         <AutoColumn gap="lg">
           <AutoRow gap="6px">
             <StyledWarningIcon />
-            <TYPE.main color={'red2'}>XPIPI Warning</TYPE.main>
+            <TYPE.main color={'red2'}>{confInfo.chainCoin} Warning</TYPE.main>
           </AutoRow>
           {transactionType !== '' && (
             <>
               <TYPE.body color={'red2'}>
-                Please be careful when <strong>{transactionType}</strong> XPIPI.
+                Please be careful when <strong>{transactionType}</strong> {confInfo.chainCoin}.
               </TYPE.body>
               <TYPE.body color={'red2'}>
                 {transactionType === 'Buying'
-                  ? 'You will not receive PIPI rewards for holding purchased XPIPI.'
-                  : 'You will need to buy back the same amount of XPIPI to be able to convert back to PIPI.'}
+                  ? `You will not receive ${confInfo.chainCoin} rewards for holding purchased ${confInfo.chainCoin} .`
+                  : `You will need to buy back the same amount of ${confInfo.chainCoin} to be able to convert back to ${confInfo.chainCoin}.`}
               </TYPE.body>
             </>
           )}

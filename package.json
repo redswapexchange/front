@@ -1,6 +1,6 @@
 {
   "name": "@pancakeswap/interface",
-  "description": "pipswap Interface",
+  "description": "redSwap Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {
@@ -106,7 +106,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@crowdin/crowdin-api-client": "^1.8.16",
-    "@pancakeswap-libs/sdk": "file:./forks/pudding-sdk",
+    "@pancakeswap-libs/sdk": "file:./forks/redSwap-sdk",
     "@types/webfontloader": "^1.6.32",
     "bignumber.js": "^9.1.0",
     "serialize-javascript": "^5.0.1",

@@ -52,16 +52,6 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], USDT]
 }
 
-// export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-//   [ChainId.MAINNET]: [
-//     [
-//       new Token(ChainId.MAINNET, '0xD0198483de27235c28B707AC65283D63Cc09DC63', 18, 'PUD', 'PuddingSwap Token'),
-//       new Token(ChainId.MAINNET, '0xBE1490094B78946d0A42104eE8d166108075DCc3', 18, 'WHOO', 'Wrapped HOO')
-//     ]
-//     // [USDT]
-//   ]
-// }
-
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
