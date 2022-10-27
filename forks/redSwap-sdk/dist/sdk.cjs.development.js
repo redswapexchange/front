@@ -91,16 +91,16 @@ function sortedInsert(items, add, maxSize, comparator) {
 var confInfo = {
   chainSymbol: 'ALYX',
   codeHash: '0x215874baffe8b8837946ade64c5ded4550e8ad1683cdf8375681d99aeca708aa',
-  weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
-  factory: '0xaB79cAbe4B8D110B35df0adAD65a02b9537A7da5',
-  chainId: 135
+  weth: '0x011Edf4c5d90780d46eB37fe2dfD17c78Ba35003',
+  factory: '0xaEBE36d525a35857F023ee281c0c8d162691102F',
+  chainId: 1314
 };
 
 var _SOLIDITY_TYPE_MAXIMA;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 135] = "MAINNET";
-  ChainId[ChainId["TESTNET"] = 135] = "TESTNET";
+  ChainId[ChainId["MAINNET"] = 1314] = "MAINNET";
+  ChainId[ChainId["TESTNET"] = 1314] = "TESTNET";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {

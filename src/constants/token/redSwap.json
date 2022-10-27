@@ -14,83 +14,11 @@
   ],
   "tokens": [
     {
-      "name": "USDT",
-      "symbol": "T1",
-      "address": "0xe0738b93174F3eA94269d5CC80807C69EE109caD",
-      "chainId": 135,
+      "name": "BUSD",
+      "symbol": "BUSD",
+      "address": "0x64486fe75a2e14eff5a0a2d7888fd3519f2c0cfc",
+      "chainId": 1314,
       "decimals": 6,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Bitcon",
-      "symbol": "T2",
-      "address": "0xa651262efbF058aAd658F0a9B73F458A049Dc00d",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Ethereum",
-      "symbol": "T3",
-      "address": "0x6729E3066a5234109fDE3E4eB7EdE8B7269B8d2f",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Bitcoin Cash",
-      "symbol": "T4",
-      "address": "0x0964581Fab9e0C2dE4a1B68bdDDE9ccE4a6AFB68",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Litecoin",
-      "symbol": "T5",
-      "address": "0xb2F3bCeA2691052Ca2a12eb5A8B7da57CD886f11",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Dogecoin",
-      "symbol": "T6",
-      "address": "0x69B9A7EC4Bf3A65b63dbAA7176b2Ab0BEf7113B2",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Polkadot",
-      "symbol": "T7",
-      "address": "0x0F7D80363093B168eF811593C37B09ab544d5139",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Kusama",
-      "symbol": "T8",
-      "address": "0x8BF4eae2bc2Ec383A9D593223070106E9D531356",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "EOS",
-      "symbol": "T9",
-      "address": "0xFd53041107eDfA0AF5E1Ce5b6dA24B69F37892e6",
-      "chainId": 135,
-      "decimals": 18,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
-    },
-    {
-      "name": "Ethereum Classic",
-      "symbol": "T10",
-      "address": "0xdB8EC957725F51829C5E1528FF1572f270619710",
-      "chainId": 135,
-      "decimals": 18,
       "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
     }
   ]

@@ -12,14 +12,14 @@ import { TokenAddressMap } from '../state/lists/hooks'
 export const confInfo = {
   chainSymbol: 'ALYX',
   chainCoin: 'ALYX',
-  explorerUrl: 'https://testnet.alyxscan.com',
-  weth: '0x8eF7888d0887c21Ae598f89346704d7F43bB735c',
-  factory: '0x4B9264fc16c7895C438fDFd4E2798059Acd56631',
-  router1: '0x0f8e2dB682609566A0417f1dba52d2787Feb134d',
-  router2: '0xC60b166930D171692B0bFe4b16A0803d78BAEb99',
-  multiCall: '0x6d792390f0760093A4d22581e3d9fD00f76f1b6E',
-  usdt: '0xe0738b93174F3eA94269d5CC80807C69EE109caD',
-  chainId: 135,
+  explorerUrl: 'https://www.alyxscan.com',
+  weth: '0x011Edf4c5d90780d46eB37fe2dfD17c78Ba35003',
+  factory: '0xaEBE36d525a35857F023ee281c0c8d162691102F',
+  router1: '0x2ed05E14D332bcFd56c982fCAF49d76D953DC10C',
+  router2: '0xE014FE2234A5cC3Fa6b4bFdd1B6592CDc134b2b8',
+  multiCall: '0x374632aE0667d6B7Ae5EeF43050DC9703F5730d7',
+  usdt: '0x64486fe75a2e14eff5a0a2d7888fd3519f2c0cfc',
+  chainId: 1314,
   swapLps: 'Swap LPs'
 }
 
