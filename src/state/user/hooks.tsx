@@ -187,7 +187,7 @@ export function usePairAdder(): (pair: Pair) => void {
  * @param tokenB the other token
  */
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
-  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'PUD-LP', confInfo.swapLps)
+  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'ALYX-LP', confInfo.swapLps)
 }
 
 /**

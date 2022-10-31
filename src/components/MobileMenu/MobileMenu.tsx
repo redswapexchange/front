@@ -49,9 +49,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
     if (bl) return { color: '#c63745' }
     return {}
   }
-  // const { pippiPrice } = useHTPrice()
-  // const { account } = useActiveWeb3React()
-  // const closeMenu = () => {};
 
   if (visible) {
     return (
@@ -99,10 +96,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
               </span>
             </StyledAbsoluteLink>
           </Cn>
-          {/* <Bottom>
-            {account && !isZero(pippiPrice) && <Price className="number">1PUD=${pippiPrice.toFixed(3)}</Price>}
-            <LngSwith className="mobile-lng-swith"></LngSwith>
-          </Bottom> */}
         </StyledMobileMenu>
       </StyledMobileMenuWrapper>
     )

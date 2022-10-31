@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ isDark }) => {
   return (
     <StyledLogo to="/">
       <img src={isDark ? logoDark : logoLight} alt="logo" />
-      <StyledText>Pippi Shrimp</StyledText>
+      <StyledText>Swap Shrimp</StyledText>
     </StyledLogo>
   )
 }

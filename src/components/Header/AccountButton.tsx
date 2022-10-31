@@ -57,16 +57,6 @@ const AccountButton: React.FC<{}> = () => {
                 <img src={copyIcon} alt="" onClick={copy} />
               </div>
             </Content>
-            {/* <Content>
-              <div className="title">
-                <TranslatedText translationId={226}>Your ALYX Balance</TranslatedText>
-              </div>
-              <div className="money">{getBalanceNumber(sushiBalance)}</div>
-              <div className="title usdt">=${getBalanceNumber(sushiBalance) * pippiPrice}</div>
-              <Link href={`https://www.hooscan.com/address/address=${account}`}>
-                <TranslatedText translationId={250}>View on HscScan</TranslatedText>
-              </Link>
-            </Content> */}
             <div className="flex">
               <ButtonCustom onClick={handleSignOutClick}>
                 <TranslatedText translationId={252}>Sign out</TranslatedText>

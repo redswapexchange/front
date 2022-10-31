@@ -116,7 +116,6 @@ const StyledAccountButtonWrapper = styled.div`
 export default function Header() {
   const isDark = useIsDarkMode()
   const history = useHistory()
-  // const { pippiPrice } = useHtPrice()
   const [mobileMenu, setMobileMenu] = useState(false)
 
   // 首页不展示导航
