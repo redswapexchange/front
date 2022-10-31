@@ -19,7 +19,6 @@ import { lightTheme } from './theme'
 import { FixedGlobalStyle, ThemedGlobalStyle } from './components/Shared'
 import getLibrary from './utils/getLibrary'
 import RefreshProvider from './contexts/RefreshProvider'
-// mport PriceProvider from './contexts/PriceProvider'
 import { I18nProvider } from 'i18n/i18n-react'
 
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
@@ -64,30 +63,6 @@ function ThemeProvider({ children }: { children?: React.ReactNode }) {
 
   return <StyledThemeProvider theme={lightTheme}>{children}</StyledThemeProvider>
 }
-
-// ReactDOM.render(
-//   <StrictMode>
-//     <FixedGlobalStyle />
-//     <Web3ReactProvider getLibrary={getLibrary}>
-//       <Web3ProviderNetwork getLibrary={getLibrary}>
-//         <Provider store={store}>
-//           <Updaters />
-//           <RefreshProvider>
-//             <PriceProvider>
-//               <ThemeProvider>
-//                 <I18nProvider>
-//                   <ThemedGlobalStyle />
-//                   <App />
-//                 </I18nProvider>
-//               </ThemeProvider>
-//             </PriceProvider>
-//           </RefreshProvider>
-//         </Provider>
-//       </Web3ProviderNetwork>
-//     </Web3ReactProvider>
-//   </StrictMode>,
-//   document.getElementById('root')
-// )
 
 ReactDOM.render(
   <StrictMode>

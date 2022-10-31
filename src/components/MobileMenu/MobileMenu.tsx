@@ -3,12 +3,6 @@ import styled, { keyframes } from 'styled-components'
 
 import { NavLink, useHistory } from 'react-router-dom'
 import TranslatedText from '../TranslatedText'
-// import LngSwith from '../Header/LngSwith'
-// import useHTPrice from '../../hooks/useHtPrice'
-// import { useActiveWeb3React } from '../../hooks'
-// import TopDecoration from './TopDecoration'
-// import BottomDecoration from './BottomDecoration'
-
 import swapNav from '../../assets/images/swapNav.png'
 import swapHoverNav from '../../assets/images/swapHoverNav.png'
 

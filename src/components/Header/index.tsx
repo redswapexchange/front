@@ -5,8 +5,6 @@ import { useHistory } from 'react-router-dom'
 
 import styled from 'styled-components'
 import Settings from '../Settings'
-// import useHtPrice from '../../hooks/useHtPrice'
-// import LngSwithForWeb from './LngSwithForWeb'
 import Nav from './Nav'
 import { useIsDarkMode } from '../../state/user/hooks'
 import Logo from './Logo'
