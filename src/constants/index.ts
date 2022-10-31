@@ -12,10 +12,6 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-// export const HUSD = new Token(ChainId.MAINNET, '0x92a0bD4584c147D1B0e8F9185dB0BDa10B05Ed7e', 6, 'HUSD', 'Hoo-Peg USDC Token')
-// export const USDT = new Token(ChainId.MAINNET, confInfo.usdt, 6, 'USDT', 'Hoo-Peg Tether Token')
-// export const ETH = new Token(ChainId.MAINNET, confInfo.weth, 18, 'ETH', 'Hoo-Peg ETH')
-
 export const USDT = new Token(ChainId.MAINNET, confInfo.usdt, 6, 'USDT', 'red-Peg Tether Token')
 export const ETH = new Token(ChainId.MAINNET, confInfo.weth, 18, 'ETH', 'red-Peg ETH')
 
