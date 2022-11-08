@@ -12,6 +12,7 @@ import chartNav from '../../assets/images/chartNav.png'
 import chartHoverNav from '../../assets/images/chartHoverNav.png'
 import codeNav from '../../assets/images/codeNav.png'
 import codeHoverNav from '../../assets/images/codeHoverNav.png'
+import ShareLink from '../Header/ShareLink'
 
 import logo from '../../assets/images/logo3.png'
 
@@ -90,6 +91,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
               </span>
             </StyledAbsoluteLink>
           </Cn>
+          <ShareLink />
         </StyledMobileMenu>
       </StyledMobileMenuWrapper>
     )

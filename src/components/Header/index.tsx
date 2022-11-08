@@ -12,6 +12,7 @@ import menuIcon from '../../assets/images/menu.png'
 import MobileMenu from '../MobileMenu'
 import AccountButton from './AccountButton'
 import Web3Status from '../Web3Status'
+import ShareLink from './ShareLink'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -156,6 +157,7 @@ export default function Header() {
           <HeaderControls>
             <HeaderElement>
               <StyledAccountButtonWrapper>
+                <ShareLink />
                 <Web3Status />
                 <AccountButton />
                 <Settings />
