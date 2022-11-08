@@ -18,7 +18,7 @@ export const confInfo = {
   router1: '0x2ed05E14D332bcFd56c982fCAF49d76D953DC10C',
   router2: '0xE014FE2234A5cC3Fa6b4bFdd1B6592CDc134b2b8',
   multiCall: '0x374632aE0667d6B7Ae5EeF43050DC9703F5730d7',
-  usdt: '0x64486fe75a2e14eff5a0a2d7888fd3519f2c0cfc',
+  usdt: '0x2fDa00986138F838D21163cdE9aB398A131581E6',
   chainId: 1314,
   swapLps: 'Swap LPs'
 }
@@ -28,7 +28,7 @@ export const swapLink = {
   swap: '/swap',
   liquidity: '/pool',
   chart: '/',
-  code: '/',
+  code: 'https://github.com/redswapexchange',
   twitter: '/',
   tm: '/',
   crossChainBridge: '/'

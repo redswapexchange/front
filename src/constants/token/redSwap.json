@@ -7,19 +7,51 @@
     "patch": 1
   },
   "tags": {},
-  "logoURI": "https://test.redswap.exchange/images/192x192_App_Icon.png",
+  "logoURI": "https://www.redswap.exchange/images/192x192_App_Icon.png",
   "keywords": [
     "RedSwap",
     "default"
   ],
   "tokens": [
     {
-      "name": "BUSD",
-      "symbol": "BUSD",
-      "address": "0x64486fe75a2e14eff5a0a2d7888fd3519f2c0cfc",
+      "name": "ALYX PEG BTC",
+      "symbol": "BTC",
+      "address": "0xF677741eA75a4Dd81F8bF0297f3868899C086F31",
       "chainId": 1314,
-      "decimals": 6,
-      "logoURI": "https://pbs.twimg.com/profile_images/1569694896306667523/lU-19cGj_400x400.jpg"
+      "decimals": 18,
+      "logoURI": "https://tokens.1inch.io/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.png"
+    },
+    {
+      "name": "ALYX PEG ETH",
+      "symbol": "ETH",
+      "address": "0x702254D7504664f1aEaE9ed18eC56eBb44d3fF47",
+      "chainId": 1314,
+      "decimals": 18,
+      "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png"
+    },
+    {
+      "name": "ALYX PEG USDT",
+      "symbol": "USDT",
+      "address": "0x2fDa00986138F838D21163cdE9aB398A131581E6",
+      "chainId": 1314,
+      "decimals": 18,
+      "logoURI": "https://tokens.1inch.io/0xdac17f958d2ee523a2206206994597c13d831ec7.png"
+    },
+    {
+      "name": "ALYX PEG USDC",
+      "symbol": "USDC",
+      "address": "0x1A06D0F464ab5ca56a6161c6AF4feDF42f7FDa44",
+      "chainId": 1314,
+      "decimals": 18,
+      "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+    },
+    {
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0x480bAacEa7d2DCDd28da31A5B31f49DfC4e6104E",
+      "chainId": 1314,
+      "decimals": 18,
+      "logoURI": "https://bscscan.com/token/images/busdt_32.png"
     }
   ]
 }
