@@ -23,6 +23,17 @@ export const confInfo = {
   swapLps: 'Swap LPs'
 }
 
+export const swapLink = {
+  home: '/',
+  swap: '/swap',
+  liquidity: '/pool',
+  chart: '/',
+  code: '/',
+  twitter: '/',
+  tm: '/',
+  crossChainBridge: '/'
+}
+
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value: any): string | false {
   try {

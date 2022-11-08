@@ -1,6 +1,7 @@
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import styled from 'styled-components'
+import { swapLink } from '../../utils'
 
 import tmLinkImg from '../../assets/images/tm_link.png'
 import twitterLinkImg from '../../assets/images/twitter_link.png'
@@ -26,10 +27,10 @@ const ShareLinkDiv = styled.div`
 export default function ShareLink() {
   return (
     <ShareLinkDiv className={isMobile ? 'style-mobile' : ''}>
-      <a className="link-a" href="http://" target="_blank" rel="noopener noreferrer">
+      <a className="link-a" href={swapLink.tm} target="_blank" rel="noopener noreferrer">
         <img className="img-tm" src={tmLinkImg} alt="" />
       </a>
-      <a className="link-a" href="http://" target="_blank" rel="noopener noreferrer">
+      <a className="link-a" href={swapLink.twitter} target="_blank" rel="noopener noreferrer">
         <img className="img-twitter" src={twitterLinkImg} alt="" />
       </a>
     </ShareLinkDiv>

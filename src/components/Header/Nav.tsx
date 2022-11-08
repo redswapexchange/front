@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import TranslatedText from '../TranslatedText'
 import swapNav from '../../assets/images/swapNav.png'
 import swapHoverNav from '../../assets/images/swapHoverNav.png'
+import { swapLink } from '../../utils'
 
 import liquidityNav from '../../assets/images/liquitdiNvg.png'
 import liquidityHoverNav from '../../assets/images/liquitdiHoverNvg.png'
@@ -35,14 +36,14 @@ const Nav: React.FC = () => {
 
   return (
     <StyledNav>
-      <StyledLink className="swap-nav" to={'/swap'}>
+      <StyledLink className="swap-nav" to={swapLink.swap}>
         <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
         <span className="navText" style={textColor(currPath === '/swap')}>
           <TranslatedText translationId={202}>Swap</TranslatedText>
         </span>
       </StyledLink>
 
-      <StyledLink className="pool-nav" to={'/pool'}>
+      <StyledLink className="pool-nav" to={swapLink.liquidity}>
         <img
           className="navImg"
           src={currPath !== '/' && currPath !== '/swap' ? liquidityHoverNav : liquidityNav}
@@ -54,14 +55,14 @@ const Nav: React.FC = () => {
         </span>
       </StyledLink>
 
-      <StyledAbsoluteLink className="chart-nav" href="/">
+      <StyledAbsoluteLink className="chart-nav" href={swapLink.chart}>
         <img className="navImg" src={chartNav} alt="" sizes="" />
         <span className="navText">
           <TranslatedText translationId={202}>Chart</TranslatedText>
         </span>
       </StyledAbsoluteLink>
 
-      <StyledAbsoluteLink className="code-nav" href="/">
+      <StyledAbsoluteLink className="code-nav" href={swapLink.code}>
         <img className="navImg" src={codeNav} alt="" sizes="" />
         <span className="navText">
           <TranslatedText translationId={202}>Code</TranslatedText>

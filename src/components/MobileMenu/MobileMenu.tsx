@@ -5,6 +5,7 @@ import { NavLink, useHistory } from 'react-router-dom'
 import TranslatedText from '../TranslatedText'
 import swapNav from '../../assets/images/swapNav.png'
 import swapHoverNav from '../../assets/images/swapHoverNav.png'
+import { swapLink } from '../../utils'
 
 import liquidityNav from '../../assets/images/liquitdiNvg.png'
 import liquidityHoverNav from '../../assets/images/liquitdiHoverNvg.png'
@@ -51,11 +52,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
         <StyledBackdrop onClick={onDismiss} />
         <StyledMobileMenu>
           <Bg></Bg>
-          <LogoLink to={'/'} onClick={onDismiss}>
+          <LogoLink to={swapLink.home} onClick={onDismiss}>
             <img src={logo} alt="" />
           </LogoLink>
           <Cn>
-            <StyledLink to="/swap" onClick={onDismiss}>
+            <StyledLink to={swapLink.swap} onClick={onDismiss}>
               <img className="navImg" src={currPath === '/swap' ? swapHoverNav : swapNav} alt="" sizes="" />
               <span className="navText" style={textColor(currPath === '/swap')}>
                 <TranslatedText translationId={202}>Swap</TranslatedText>
@@ -63,7 +64,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledLink>
           </Cn>
           <Cn>
-            <StyledLink to={'/pool'} onClick={onDismiss}>
+            <StyledLink to={swapLink.liquidity} onClick={onDismiss}>
               <img
                 className="navImg"
                 src={currPath !== '/' && currPath !== '/swap' ? liquidityHoverNav : liquidityNav}
@@ -76,7 +77,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledLink>
           </Cn>
           <Cn>
-            <StyledAbsoluteLink href="/" onClick={onDismiss}>
+            <StyledAbsoluteLink href={swapLink.chart} onClick={onDismiss}>
               <img className="navImg" src={chartNav} alt="" sizes="" />
               <span className="navText">
                 <TranslatedText translationId={202}>Chart</TranslatedText>
@@ -84,7 +85,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
             </StyledAbsoluteLink>
           </Cn>
           <Cn>
-            <StyledAbsoluteLink href="/" onClick={onDismiss}>
+            <StyledAbsoluteLink href={swapLink.code} onClick={onDismiss}>
               <img className="navImg" src={codeNav} alt="" sizes="" />
               <span className="navText">
                 <TranslatedText translationId={202}>Code</TranslatedText>

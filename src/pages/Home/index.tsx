@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import logoImg from '../../assets/images/logo-pipi-light.png'
 import logoRed from '../../assets/images/redswapsvg.png'
+import { swapLink } from '../../utils'
 
 const HomeWarp = styled.div`
   width: 100%;
@@ -95,8 +96,8 @@ export default function Home() {
             <img className="logo-2" src={logoRed} alt="" />
           </div>
           <div className="btn-div">
-            <StyledLink href="/"> Cross-chain Bridge </StyledLink>
-            <StyledNavLink to={'/swap'}> Enter Dapp </StyledNavLink>
+            <StyledLink href={swapLink.crossChainBridge}> Cross-chain Bridge </StyledLink>
+            <StyledNavLink to={swapLink.swap}> Enter Dapp </StyledNavLink>
           </div>
         </div>
       </div>
