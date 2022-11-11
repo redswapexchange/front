@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import logoDark from '../../../assets/images/logo-pipi-light.png'
-import logoLight from '../../../assets/images/logo-pipi-light.png'
+import logoDark from '../../../assets/images/logo-swap-light.png'
+import logoLight from '../../../assets/images/logo-swap-light.png'
 import redswapsvg from '../../../assets/images/redswapsvg.png'
 import { isMobile } from 'react-device-detect'
 // import logoText from '../../../assets/images/logo_text.png'÷\

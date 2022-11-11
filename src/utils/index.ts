@@ -29,7 +29,7 @@ export const swapLink = {
   liquidity: '/pool',
   chart: '/',
   code: 'https://github.com/redswapexchange',
-  twitter: '/',
+  twitter: 'https://twitter.com/redswap_dex',
   tm: '/',
   crossChainBridge: '/'
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logoDark from '../../assets/images/logo-pipi-dark.png'
-import logoLight from '../../assets/images/logo-pipi-light.png'
+import logoDark from '../../assets/images/logo-swap-dark.png'
+import logoLight from '../../assets/images/logo-swap-light.png'
 
 interface LogoProps {
   isDark: boolean

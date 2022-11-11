@@ -8,13 +8,18 @@ import twitterLinkImg from '../../assets/images/twitter_link.png'
 
 const ShareLinkDiv = styled.div`
   margin-right: 1rem;
+  display: flex;
+  align-items: center;
   &.style-mobile {
     position: absolute;
     bottom: 10px;
     left: 0;
   }
   .link-a {
+    padding-top: 4px;
     margin-left: 0.8rem;
+    display: flex;
+    align-items: center;
     .img-tm {
       height: 20px;
     }

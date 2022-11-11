@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import logoImg from '../../assets/images/logo-pipi-light.png'
+import logoImg from '../../assets/images/logo-swap-light.png'
 import logoRed from '../../assets/images/redswapsvg.png'
 import { swapLink } from '../../utils'
 
