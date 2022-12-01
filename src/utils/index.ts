@@ -31,7 +31,7 @@ export const swapLink = {
   code: 'https://github.com/redswapexchange',
   twitter: 'https://twitter.com/redswap_dex',
   tm: '/',
-  crossChainBridge: '/'
+  crossChainBridge: 'http://alyxbridge.com/#/swap'
 }
 
 // returns the checksummed address if the address is valid, otherwise returns false

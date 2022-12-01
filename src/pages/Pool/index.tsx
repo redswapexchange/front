@@ -73,7 +73,7 @@ export default function Pool() {
           <AutoColumn gap="12px" style={{ width: '100%' }}>
             <RowBetween padding={'0 8px'}>
               <Text color={theme.colors.text1} fontWeight={500}>
-                <TranslatedText translationId={204}>Your Liquidity</TranslatedText>
+                {!account ? <TranslatedText translationId={204}>Connect Wallet</TranslatedText> : 'Your Liquidity'}
               </Text>
               <Question
                 text={i18n(
