@@ -17,6 +17,8 @@ import { injected, fortmatic, portis } from '../../connectors'
 import { OVERLAY_READY } from '../../connectors/Fortmatic'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { AbstractConnector } from '@web3-react/abstract-connector'
+import { addAlyxNetwork } from '../../utils/addNetwork.js'
+import { useActiveWeb3React } from 'hooks'
 
 const CloseIcon = styled.div`
   position: absolute;
@@ -112,6 +114,7 @@ export default function WalletModal({
   ENSName?: string
 }) {
   // important that these are destructed from the account-specific web3-react context
+  const { library } = useActiveWeb3React()
   const { active, account, connector, activate, error } = useWeb3React()
 
   const [walletView, setWalletView] = useState(WALLET_VIEWS.ACCOUNT)
@@ -274,8 +277,21 @@ export default function WalletModal({
     })
   }
   const chainSymbol = process.env.REACT_APP_CHAIN_SYMBOL
-  function getModalContent() {
+  function  getModalContent() {
     if (error) {
+      console.log("error", error)
+      console.log("library", library)
+      console.log("window && window.ethereum && window.ethereum.isMetaMask", window && window.ethereum && window.ethereum.isMetaMask)
+      if (error instanceof UnsupportedChainIdError && library) {
+        try {
+          if (window && window.ethereum && window.ethereum.isMetaMask) {
+            // library.provider.isMetaMask = true
+            addAlyxNetwork({ library: library })
+          }
+        } catch (error) {
+          console.log("add Alyx Network Falied: ", error)
+        }
+      }
       return (
         <UpperSection>
           <CloseIcon onClick={toggleWalletModal}>
