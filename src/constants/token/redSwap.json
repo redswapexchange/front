@@ -44,14 +44,6 @@
       "chainId": 1314,
       "decimals": 18,
       "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
-    },
-    {
-      "name": "BUSD Token",
-      "symbol": "BUSD",
-      "address": "0x480bAacEa7d2DCDd28da31A5B31f49DfC4e6104E",
-      "chainId": 1314,
-      "decimals": 18,
-      "logoURI": "https://bscscan.com/token/images/busdt_32.png"
     }
   ]
 }
