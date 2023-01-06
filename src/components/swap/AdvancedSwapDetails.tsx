@@ -65,11 +65,12 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             <QuestionHelper
               text={i18n(
                 844,
-                'For each trade a %totalFee% fee is paid. %treasuryFee% goes to liquidity providers, %teamFee% goes to the %team% treasury and %buybackFee% goes to %token% buyback and burn.',
+                // 'For each trade a %totalFee% fee is paid. %treasuryFee% goes to liquidity providers, %teamFee% goes to the %team% treasury and %buybackFee% goes to %token% buyback and burn.',
+                'For each trade a %totalFee% fee is paid. %treasuryFee% goes to liquidity providers, %teamFee% goes to the %team% treasury.',
                 {
                   totalFee: '0.25',
-                  treasuryFee: '0.15%',
-                  teamFee: '0.05%',
+                  treasuryFee: '0.17%',
+                  teamFee: '0.08%',
                   buybackFee: '0.05%',
                   token: 'ALYX',
                   team: ' RedSwap'
