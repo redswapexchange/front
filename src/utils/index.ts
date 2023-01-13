@@ -27,10 +27,10 @@ export const swapLink = {
   home: '/',
   swap: '/swap',
   liquidity: '/pool',
-  chart: '/',
+  chart: 'https://info.redswap.exchange/',
   code: 'https://github.com/redswapexchange',
   twitter: 'https://twitter.com/redswap_dex',
-  tm: '/',
+  tm: 'https://docs.redswap.exchange/',
   crossChainBridge: 'http://alyxbridge.com/#/swap'
 }
 
